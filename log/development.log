@@ -20064,3 +20064,2606 @@ NoMethodError (undefined method `email' for #<Class:0x007f0f68080c40>):
   
 app/models/user.rb:6:in `connectToGmail'
 app/controllers/base_controller.rb:29:in `connectToMail'
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 13:33:45 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xCm61LARTJCTlS7V3eVvIMFaFjy/dVvTmztf27Q8E1c5ggagIHtNm8b9F5b6M1VaYZadwhgxVL4QGNBOMmbPVw==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `email' for #<Class:0x007f0f68080c40>):
+  
+app/models/user.rb:6:in `connectToGmail'
+app/controllers/base_controller.rb:29:in `connectToMail'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2018-03-16 13:40:14 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.3ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-16 13:40:15 +0530
+Started GET "/auth/google_oauth2/callback?state=73b05fdab7a7fd36769be74f7e50086b9adcf30dbd7b92d4&code=4/AABbCGj4mjNx9kTyfc3BM0kC5pid8N3DJluA5aR7XHDVf82PC_Bh0en5WQVXB-fYZ391VZNYfs8GGIxRSEw6dlw" for 127.0.0.1 at 2018-03-16 13:40:15 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"73b05fdab7a7fd36769be74f7e50086b9adcf30dbd7b92d4", "code"=>"4/AABbCGj4mjNx9kTyfc3BM0kC5pid8N3DJluA5aR7XHDVf82PC_Bh0en5WQVXB-fYZ391VZNYfs8GGIxRSEw6dlw", "provider"=>"google_oauth2"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "token", "uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ashwini Mandal"], ["email", "ashwini.mandal@cuelogic.com"], ["token", "ya29.GlyABWk8BkZRPb7KgSheUnc1Ygu-4c36LKbmN7DyU1aYOIYqSZoekZzR3A0duqHE4fV3QH1yaoul49trX59AGlbsN1RmM49DWOLsAnjU6uu2SfsQ6DXnWG61cONJmA"], ["uid", "115301852494553111492"], ["created_at", "2018-03-16 08:10:16.668696"], ["updated_at", "2018-03-16 08:10:16.668696"]]
+  [1m[35m (12.4ms)[0m  [1m[35mCOMMIT[0m
+  Rendering base/create.html.erb within layouts/base
+  Rendered base/create.html.erb within layouts/base (0.3ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 41ms (Views: 9.4ms | ActiveRecord: 17.6ms)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  [1m[35m (24.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/auth/google_oauth2/callback?state=73b05fdab7a7fd36769be74f7e50086b9adcf30dbd7b92d4&code=4/AABbCGj4mjNx9kTyfc3BM0kC5pid8N3DJluA5aR7XHDVf82PC_Bh0en5WQVXB-fYZ391VZNYfs8GGIxRSEw6dlw" for 127.0.0.1 at 2018-03-16 13:42:04 +0530
+  
+OmniAuth::Strategies::OAuth2::CallbackError (csrf_detected | CSRF detected):
+  
+omniauth (1.8.1) lib/omniauth/failure_endpoint.rb:25:in `raise_out!'
+omniauth (1.8.1) lib/omniauth/failure_endpoint.rb:20:in `call'
+omniauth (1.8.1) lib/omniauth/failure_endpoint.rb:12:in `call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:486:in `fail!'
+omniauth-oauth2 (1.5.0) lib/omniauth/strategies/oauth2.rb:71:in `callback_phase'
+omniauth (1.8.1) lib/omniauth/strategy.rb:236:in `callback_call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:188:in `call!'
+omniauth (1.8.1) lib/omniauth/strategy.rb:168:in `call'
+omniauth (1.8.1) lib/omniauth/builder.rb:63:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+rack (2.0.4) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.4) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.5) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.5) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-03-16 13:42:06 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.7ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 13:42:07 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (3.4ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 13:42:08 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oQVVBB41P03Gd+MTQo6t2L9aCQ+2p+vQqgKBAjSsfxJcrulwjl8+RpMf2lBlWJeiH5aC8RHj5L0hIQ6XsvajEg==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 1822ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-16 13:43:04 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.3ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 13:43:05 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (2.2ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.7ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.3ms)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 13:43:06 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wMO1/Cl518qFNZtsaVlY6Dv6jV7ww48WdHgfEJ804Vo9aAmIuRPWwdBdoi9Oj2KSmzYGoFeHgHv/W5CFGW49Wg==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 4623ms (ActiveRecord: 0.3ms)
+
+
+  
+Net::IMAP::BadResponseError (Unknown command h191mb256677410ita):
+  
+app/models/user.rb:8:in `connectToGmail'
+app/controllers/base_controller.rb:30:in `connectToMail'
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 13:44:13 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wMO1/Cl518qFNZtsaVlY6Dv6jV7ww48WdHgfEJ804Vo9aAmIuRPWwdBdoi9Oj2KSmzYGoFeHgHv/W5CFGW49Wg==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 5275ms (ActiveRecord: 0.3ms)
+
+
+  
+Net::IMAP::BadResponseError (Unknown command z65mb260718045ivg):
+  
+app/models/user.rb:8:in `connectToGmail'
+app/controllers/base_controller.rb:30:in `connectToMail'
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 13:44:22 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (3.6ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.2ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 13:44:28 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (2.1ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.8ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.6ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 13:44:30 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QCE0Ef/92TbTwsQnVaPj5cQ/mAyfGF7rWaRcad6XaRu9iohlb5fYPYaq/WRyddmfZPMT8jhcUYbSh9P8WM21Gw==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 1980ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 13:44:44 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (2.1ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.5ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.8ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.4ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 13:44:45 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RwpvF9hZSO8HyUlt9Fsp6F7hIRj1NcEjuprJMs4YSlW6odNjSDNJ5FKhcC7TjROS/i2q5lJxzk4xuUanSEKWVQ==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 1827ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 13:45:16 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (2.4ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.5ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 13:45:18 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KSW6nL7mfXv87BeFoBHCtr+glp3ekABM6rvk3Z7DAEHUjgboLox8cKmELsaHx/jMH2wdY3nUDyFhmGtIGJncQQ==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 5326ms (ActiveRecord: 0.2ms)
+
+
+  
+Net::IMAP::BadResponseError (Unknown command q191mb56607573iod):
+  
+app/models/user.rb:8:in `connectToGmail'
+app/controllers/base_controller.rb:30:in `connectToMail'
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 13:48:45 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (2.4ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.5ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.9ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.3ms)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 13:48:46 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T1vY51JuwwA0/Y0cEr9Lh+ElArAyA3Oaq/9BX2DqmuWy8GSTwgTCC2GVtF81aXH9QemJTpVHfPcg3M7K5rBG5Q==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 1806ms (ActiveRecord: 0.3ms)
+
+
+  
+Net::IMAP::BadResponseError (Unknown command g6mb261192926itf):
+  
+app/models/user.rb:9:in `connectToGmail'
+app/controllers/base_controller.rb:30:in `connectToMail'
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 13:49:04 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T1vY51JuwwA0/Y0cEr9Lh+ElArAyA3Oaq/9BX2DqmuWy8GSTwgTCC2GVtF81aXH9QemJTpVHfPcg3M7K5rBG5Q==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 885ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 13:49:07 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (2.3ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 13:49:08 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Rqji5PMrCqbVHQdtPy1Ussazknb3+hI4gIZLLH8Qg5S7A16QY0ELrYB1Pi4Y+27IZn8ZiFC+HVULpcS5+UpflA==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 895ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 13:49:21 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (2.0ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.6ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.3ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 13:49:23 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oXiOglcrxIq36ji3hFrTnfLkKfFV+WUFB4wJMpEpOr1c0zL2x0HFgeKCAfSjjOnnUiiiD/K9amiMr4anF3PmvQ==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 856ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 13:49:42 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (2.5ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.5ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 13:49:44 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dTMjIoTD09rF808GQFSKLdKF4jZn9fvKbjmw9NVjY5CImJ9WFKnS0ZCbdkVngrBXcklpyMCx9KflGj9hUzm/kA==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 1855ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 13:51:08 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (2.2ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.5ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 13:51:09 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"06hecMyDLNXiixNeSQajmU8lvUEKHYQm7ZQ6ZUo6KXUuA+IEXOkt3rfjKh1u0Jnj7+k2v61Zi0tmt7XwzGD1dQ==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 2509ms (ActiveRecord: 0.2ms)
+
+
+  
+Gmail::Client::AuthorizationError (Couldn't login to given Gmail account: ashwini.mandal@cuelogic.com (Invalid credentials (Failure))):
+  
+app/models/user.rb:7:in `connectToGmail'
+app/controllers/base_controller.rb:30:in `connectToMail'
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 13:51:39 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"06hecMyDLNXiixNeSQajmU8lvUEKHYQm7ZQ6ZUo6KXUuA+IEXOkt3rfjKh1u0Jnj7+k2v61Zi0tmt7XwzGD1dQ==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 889ms (ActiveRecord: 0.3ms)
+
+
+  
+Gmail::Client::AuthorizationError (Couldn't login to given Gmail account: Ashwini Mandal@gmail.com (Invalid credentials (Failure))):
+  
+app/models/user.rb:8:in `connectToGmail'
+app/controllers/base_controller.rb:30:in `connectToMail'
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 13:51:43 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (4.4ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.5ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.3ms)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 13:51:45 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g1zaKwCiKb/0UK67uK4ZRVSaRttJh21RVFFhCatFBT9+92ZfkMgotKE4l/ifeCM/9FbNJe7DYjzfcu6cLR/ZPw==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 889ms (ActiveRecord: 0.3ms)
+
+
+  
+Gmail::Client::AuthorizationError (Couldn't login to given Gmail account: Ashwini Mandal@gmail.com (Invalid credentials (Failure))):
+  
+app/models/user.rb:8:in `connectToGmail'
+app/controllers/base_controller.rb:30:in `connectToMail'
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 13:54:20 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (3.0ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/base/auth/google_oauth2" for 127.0.0.1 at 2018-03-16 13:54:23 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/base/auth/google_oauth2"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-03-16 13:54:30 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.4ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (1.0ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.5ms)
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-16 13:54:31 +0530
+Started GET "/auth/google_oauth2/callback?state=f2ba257a83f77a89a22d4c81d6417ba9b9476e439e01f3d4&code=4/AADDbOeQNbg5akyq9jMxE8wasNK_Tkz4YStU3yCN3aSEdllUeXLMZhtAY2OWeMHmGyApqXBnZUOGFhZ7VAItRaw" for 127.0.0.1 at 2018-03-16 13:54:31 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"f2ba257a83f77a89a22d4c81d6417ba9b9476e439e01f3d4", "code"=>"4/AADDbOeQNbg5akyq9jMxE8wasNK_Tkz4YStU3yCN3aSEdllUeXLMZhtAY2OWeMHmGyApqXBnZUOGFhZ7VAItRaw", "provider"=>"google_oauth2"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "token", "uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ashwini Mandal"], ["email", "ashwini.mandal@cuelogic.com"], ["token", "ya29.GlyABUYxESTFLJ5lzJ9YMy80JG3zs3ONo7Sx3GBCaE5JPcK394kD8c_hcsE7VdYNTfaFZOqqtTte27iz7LXzWzZ2J-Iz2sJJQTIlDJ9UPPUQ8yB3een5HwTHGlVEAQ"], ["uid", "115301852494553111492"], ["created_at", "2018-03-16 08:24:32.650128"], ["updated_at", "2018-03-16 08:24:32.650128"]]
+  [1m[35m (27.6ms)[0m  [1m[35mCOMMIT[0m
+  Rendering base/create.html.erb within layouts/base
+  Rendered base/create.html.erb within layouts/base (0.5ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.6ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.3ms)
+Completed 200 OK in 60ms (Views: 16.7ms | ActiveRecord: 30.1ms)
+
+
+Started GET "/auth/google_oauth2/callback?state=f2ba257a83f77a89a22d4c81d6417ba9b9476e439e01f3d4&code=4/AADDbOeQNbg5akyq9jMxE8wasNK_Tkz4YStU3yCN3aSEdllUeXLMZhtAY2OWeMHmGyApqXBnZUOGFhZ7VAItRaw" for 127.0.0.1 at 2018-03-16 13:55:10 +0530
+  
+OmniAuth::Strategies::OAuth2::CallbackError (csrf_detected | CSRF detected):
+  
+omniauth (1.8.1) lib/omniauth/failure_endpoint.rb:25:in `raise_out!'
+omniauth (1.8.1) lib/omniauth/failure_endpoint.rb:20:in `call'
+omniauth (1.8.1) lib/omniauth/failure_endpoint.rb:12:in `call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:486:in `fail!'
+omniauth-oauth2 (1.5.0) lib/omniauth/strategies/oauth2.rb:71:in `callback_phase'
+omniauth (1.8.1) lib/omniauth/strategy.rb:236:in `callback_call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:188:in `call!'
+omniauth (1.8.1) lib/omniauth/strategy.rb:168:in `call'
+omniauth (1.8.1) lib/omniauth/builder.rb:63:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+rack (2.0.4) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.4) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.5) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.5) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-03-16 13:55:12 +0530
+  
+SyntaxError (/home/ashwini/Workspace/ProviderDemo/app/controllers/base_controller.rb:9: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+    puts "token"auth_hash.credentials.token
+                         ^):
+  
+app/controllers/base_controller.rb:9: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2018-03-16 13:55:21 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.3ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.8ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-16 13:55:22 +0530
+Started GET "/auth/google_oauth2/callback?state=910d80e595ff4ba59ecc5c57bef0676e6eaf1311eafe0c9a&code=4/AAAT_JN4B5HAArc_-sMqe7wiDi61PUdY2Qmp2kRIwDPdr8U7cXFeNZcE1ozL0Vz1s2YxUGOnBNiirv54FxTJDxg" for 127.0.0.1 at 2018-03-16 13:55:22 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"910d80e595ff4ba59ecc5c57bef0676e6eaf1311eafe0c9a", "code"=>"4/AAAT_JN4B5HAArc_-sMqe7wiDi61PUdY2Qmp2kRIwDPdr8U7cXFeNZcE1ozL0Vz1s2YxUGOnBNiirv54FxTJDxg", "provider"=>"google_oauth2"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "token", "uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ashwini Mandal"], ["email", "ashwini.mandal@cuelogic.com"], ["token", "ya29.GlyABbFgaz8vXYFzoSZ8jSGtp4_Ne3muqjGTovDM9LazHmabO8STYMkjo05Vjgd71PoLKdAMJtuDCBndJLIPQNaglRnqKYGVBrq61Si7tEwf2hOFwG6zRqKb0KAHcg"], ["uid", "115301852494553111492"], ["created_at", "2018-03-16 08:25:23.949618"], ["updated_at", "2018-03-16 08:25:23.949618"]]
+  [1m[35m (23.3ms)[0m  [1m[35mCOMMIT[0m
+  Rendering base/create.html.erb within layouts/base
+  Rendered base/create.html.erb within layouts/base (0.5ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.6ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.3ms)
+Completed 200 OK in 59ms (Views: 16.7ms | ActiveRecord: 28.3ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 13:55:32 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (3.0ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 13:55:33 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H5ZEFO0Mj+PXxq6dhApa9EETUaixAqqUBMdGyRPhWkPiPfhgfWaO6IKul96j3GCO4d/aVhZGpfmP5MlclbuGQw==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 1934ms (ActiveRecord: 0.6ms)
+
+
+  
+Gmail::Client::AuthorizationError (Couldn't login to given Gmail account: ashwini.mandal@cuelogic.com (Invalid credentials (Failure))):
+  
+app/models/user.rb:7:in `connectToGmail'
+app/controllers/base_controller.rb:31:in `connectToMail'
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 13:55:55 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (2.4ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.5ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 13:55:56 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5ZX07GmG8uKShYd/gYQgytyeKvkRTZpi6EUb3p33NFwYPkiY+ezz6cftvjymUhqwfFKhB7YJlQ9jZpRLG63oXA==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 1695ms (ActiveRecord: 3.0ms)
+
+
+  
+Gmail::Client::AuthorizationError (Couldn't login to given Gmail account: ashwini.mandal@cuelogic.com (Invalid credentials (Failure))):
+  
+app/models/user.rb:7:in `connectToGmail'
+app/controllers/base_controller.rb:31:in `connectToMail'
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 13:57:34 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (2.2ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.7ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.4ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 13:57:36 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wxuYjDoYuXqoBgkmc7VLBefN+BddnZUl5OaIYfEJZk8+sCT4qnK4cf1uMGVUY3F/RwFz6frZmkhvxQf0d1O6Tw==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 1739ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 13:58:36 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (2.1ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.5ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.3ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 13:58:37 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8AXpmhWcgSlIROoleCyrjBJIhZS08LOLOr9akAHwlCwNrlXuhfaAIh0s02Zf+pH2soQOahO0vOaxnNUFh6pILA==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 1874ms (ActiveRecord: 0.2ms)
+
+
+  
+Gmail::Client::AuthorizationError (Couldn't login to given Gmail account: ashwini.mandal@cuelogic.com (Invalid credentials (Failure))):
+  
+app/models/user.rb:7:in `connectToGmail'
+app/controllers/base_controller.rb:31:in `connectToMail'
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 15:08:20 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8AXpmhWcgSlIROoleCyrjBJIhZS08LOLOr9akAHwlCwNrlXuhfaAIh0s02Zf+pH2soQOahO0vOaxnNUFh6pILA==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 1668ms (ActiveRecord: 0.4ms)
+
+
+  
+Gmail::Client::AuthorizationError (Couldn't login to given Gmail account: ashwini.mandal@cuelogic.com (Invalid credentials (Failure))):
+  
+app/models/user.rb:7:in `connectToGmail'
+app/controllers/base_controller.rb:31:in `connectToMail'
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 15:09:07 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8AXpmhWcgSlIROoleCyrjBJIhZS08LOLOr9akAHwlCwNrlXuhfaAIh0s02Zf+pH2soQOahO0vOaxnNUFh6pILA==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 3210ms (ActiveRecord: 2.4ms)
+
+
+  
+Gmail::Client::AuthorizationError (Couldn't login to given Gmail account: ashwini.mandal@cuelogic.com (Invalid credentials (Failure))):
+  
+app/models/user.rb:7:in `connectToGmail'
+app/controllers/base_controller.rb:32:in `connectToMail'
+Started GET "/" for 127.0.0.1 at 2018-03-16 15:09:13 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.6ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.6ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.3ms)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-16 15:09:14 +0530
+Started GET "/auth/google_oauth2/callback?state=2d1aa543abbe7175a98c6e8df4f209c74e9c08d312004d43&code=4/AABJAyMwo2p2BiCQJQyetab5LKhNdsaTo7CJ0muDjheOXjTKHzERjCC_KB8DuAno-euPxbu5mI2AUe1cjnPUSWY" for 127.0.0.1 at 2018-03-16 15:09:15 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"2d1aa543abbe7175a98c6e8df4f209c74e9c08d312004d43", "code"=>"4/AABJAyMwo2p2BiCQJQyetab5LKhNdsaTo7CJ0muDjheOXjTKHzERjCC_KB8DuAno-euPxbu5mI2AUe1cjnPUSWY", "provider"=>"google_oauth2"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "token", "uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ashwini Mandal"], ["email", "ashwini.mandal@cuelogic.com"], ["token", "ya29.GlyABSSYrKWrasmNcmDTUBnWDwEC8DU7I6a-3OZPi19UxEY94rS3O0HyWNXsK-vJymdnotfMLk7LgYoBpIedPuRLOSeMtBwDTUq1z5MYLzoo36pCqitwyV6h4T8OKQ"], ["uid", "115301852494553111492"], ["created_at", "2018-03-16 09:39:16.258404"], ["updated_at", "2018-03-16 09:39:16.258404"]]
+  [1m[35m (96.7ms)[0m  [1m[35mCOMMIT[0m
+  Rendering base/create.html.erb within layouts/base
+  Rendered base/create.html.erb within layouts/base (0.5ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.7ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 114ms (Views: 12.1ms | ActiveRecord: 97.3ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 15:11:42 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (2.3ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.5ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 15:11:47 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tFC5ZN9vTwpz8ZJafypg82bJkClyyRY8PLPpcnjVug9J+wUQTwVOASaZqxlY/FqJxgUb19WNGVG3kGbn/o9mDw==", "users"=>{"to"=>"ashu", "subject"=>"sd", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 15:11:48 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tFC5ZN9vTwpz8ZJafypg82bJkClyyRY8PLPpcnjVug9J+wUQTwVOASaZqxlY/FqJxgUb19WNGVG3kGbn/o9mDw==", "users"=>{"to"=>"ashu", "subject"=>"sd", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 15:11:49 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tFC5ZN9vTwpz8ZJafypg82bJkClyyRY8PLPpcnjVug9J+wUQTwVOASaZqxlY/FqJxgUb19WNGVG3kGbn/o9mDw==", "users"=>{"to"=>"ashu", "subject"=>"sd", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 1755ms (ActiveRecord: 0.2ms)
+
+
+  
+Gmail::Client::AuthorizationError (Couldn't login to given Gmail account: ashwini.mandal@cuelogic.com (Invalid credentials (Failure))):
+  
+app/models/user.rb:7:in `connectToGmail'
+app/controllers/base_controller.rb:32:in `connectToMail'
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 15:11:50 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tFC5ZN9vTwpz8ZJafypg82bJkClyyRY8PLPpcnjVug9J+wUQTwVOASaZqxlY/FqJxgUb19WNGVG3kGbn/o9mDw==", "users"=>{"to"=>"ashu", "subject"=>"sd", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 1701ms (ActiveRecord: 0.2ms)
+
+
+  
+Gmail::Client::AuthorizationError (Couldn't login to given Gmail account: ashwini.mandal@cuelogic.com (Invalid credentials (Failure))):
+  
+app/models/user.rb:7:in `connectToGmail'
+app/controllers/base_controller.rb:32:in `connectToMail'
+Completed 500 Internal Server Error in 1766ms (ActiveRecord: 4.1ms)
+
+
+  
+Gmail::Client::AuthorizationError (Couldn't login to given Gmail account: ashwini.mandal@cuelogic.com (Invalid credentials (Failure))):
+  
+app/models/user.rb:7:in `connectToGmail'
+app/controllers/base_controller.rb:32:in `connectToMail'
+Completed 500 Internal Server Error in 2307ms (ActiveRecord: 0.2ms)
+
+
+  
+Gmail::Client::AuthorizationError (Couldn't login to given Gmail account: ashwini.mandal@cuelogic.com (Invalid credentials (Failure))):
+  
+app/models/user.rb:7:in `connectToGmail'
+app/controllers/base_controller.rb:32:in `connectToMail'
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 15:14:23 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (2.7ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 15:14:25 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yhslC9eMVSt4pQ0C/8KTXFjunFxGKfWjtOIQ0+tNhak3sJl/R+ZUIC3NNEHYFKkm+CIXouFt+s4/wZ9GbRdZqQ==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 833ms (ActiveRecord: 0.3ms)
+
+
+  
+Gmail::Client::AuthorizationError (Couldn't login to given Gmail account: Ashwini Mandal@gmail.com (Invalid credentials (Failure))):
+  
+app/models/user.rb:8:in `connectToGmail'
+app/controllers/base_controller.rb:32:in `connectToMail'
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 15:19:02 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (3.3ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.5ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 15:19:03 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MRa9zYH0AhmiHTFs1FbIR6eMbTn0Qu4HOSD92LwwMQvMvQG5EZ4DEvd1CC/zgPI9B0Dmx1MG4WqyA3JNOmrtCw==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 2518ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 15:21:03 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (2.1ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.5ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 15:21:05 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VgkNbdPlDd6TEdEWxpfXSdHJfd6eLZQhR1gxXlqKYb+rorEZQ48M1cZ56FXhQe0zcQX2IDlpm0zMe77L3NC9vw==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 825ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 15:21:45 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (2.3ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.6ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.4ms)
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 15:21:46 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pkCMMDJ81ajTgCRTfSfZ0Y7pqUuRbLfMmKNh4QrMD6Jb6zBEohbUo4boHRBa8eOrLiUitTYouKETgO50jJbTog==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 893ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 15:21:57 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (3.5ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.5ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.9ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.3ms)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 15:21:58 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V0dLph71DbVY1MFrMvhfN1Hkeq7+O6/nPFT9vr+Ftlmq7PfSjp8Mvg28+CgVLmVN8SjxUFl/oIq3d3IrOd9qWQ==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 881ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/auth/google_oauth2/callback?state=2d1aa543abbe7175a98c6e8df4f209c74e9c08d312004d43&code=4/AABJAyMwo2p2BiCQJQyetab5LKhNdsaTo7CJ0muDjheOXjTKHzERjCC_KB8DuAno-euPxbu5mI2AUe1cjnPUSWY" for 127.0.0.1 at 2018-03-16 15:24:27 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+OmniAuth::Strategies::OAuth2::CallbackError (csrf_detected | CSRF detected):
+  
+omniauth (1.8.1) lib/omniauth/failure_endpoint.rb:25:in `raise_out!'
+omniauth (1.8.1) lib/omniauth/failure_endpoint.rb:20:in `call'
+omniauth (1.8.1) lib/omniauth/failure_endpoint.rb:12:in `call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:486:in `fail!'
+omniauth-oauth2 (1.5.0) lib/omniauth/strategies/oauth2.rb:71:in `callback_phase'
+omniauth (1.8.1) lib/omniauth/strategy.rb:236:in `callback_call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:188:in `call!'
+omniauth (1.8.1) lib/omniauth/strategy.rb:168:in `call'
+omniauth (1.8.1) lib/omniauth/builder.rb:63:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+rack (2.0.4) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.4) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.5) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.5) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 15:24:30 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (188.0ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.6ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 220ms (Views: 218.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 15:24:32 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (3.2ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.3ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 15:24:34 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ofhmXT8mX1uznHYf2oGn4LAzgsRUTNJ04hV1Ka6INHJcU9opr0xeUOb0T1z9V52aEP8JOvMI3RlpNvq8KNLocg==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 949ms (ActiveRecord: 7.3ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 15:24:54 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (4.0ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.8ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 15:25:05 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hI7T9QR5w/AuyW+RCfySkvD/mLMquoHiJCKcCQm2FEd5JW+BlBPC+3uhVtIuKqjoUDMTTY3+jo+vAROcj+zIRw==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 864ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 15:26:11 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (5.6ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 15:26:13 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hXar9tDlaJqymdjUGFoNUR9ifT1kyKH99I5l6/Dm9Zh43ReCQI9pkefx4Zc/jDcrv672w8OMrpB/rep+drwpmA==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 886ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 15:26:44 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (146.6ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 170ms (Views: 164.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 15:26:46 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Qm0HuS+5+nxeybOddt54sQeo+9RLIoBmU09NVrV0yUG/xrvNv9P7dwuhit5RCELLp2RwKuxmjwvYbMLDMy4VQQ==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 917ms (ActiveRecord: 8.9ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/base_layout/bootstrap.min.css.map"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.1.5) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.5) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.1.5) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.5) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 15:27:29 +0530
+Processing by BaseController#ckeditorView as HTML
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 15:27:39 +0530
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 15:27:39 +0530
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (2.2ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.5ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.3ms)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Processing by BaseController#connectToMail as HTML
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Qm0HuS+5+nxeybOddt54sQeo+9RLIoBmU09NVrV0yUG/xrvNv9P7dwuhit5RCELLp2RwKuxmjwvYbMLDMy4VQQ==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Qm0HuS+5+nxeybOddt54sQeo+9RLIoBmU09NVrV0yUG/xrvNv9P7dwuhit5RCELLp2RwKuxmjwvYbMLDMy4VQQ==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 951ms (ActiveRecord: 2.8ms)
+
+
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 970ms (ActiveRecord: 2.4ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 15:28:37 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Qm0HuS+5+nxeybOddt54sQeo+9RLIoBmU09NVrV0yUG/xrvNv9P7dwuhit5RCELLp2RwKuxmjwvYbMLDMy4VQQ==", "users"=>{"to"=>"sdsa", "subject"=>"sds", "content"=>"<p>asdsa</p>"}, "commit"=>"compose"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 895ms (ActiveRecord: 0.4ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 15:30:27 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Qm0HuS+5+nxeybOddt54sQeo+9RLIoBmU09NVrV0yUG/xrvNv9P7dwuhit5RCELLp2RwKuxmjwvYbMLDMy4VQQ==", "users"=>{"to"=>"sdsa", "subject"=>"sds", "content"=>"<p>asdsa</p>"}, "commit"=>"compose"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 909ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 15:32:33 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (2.7ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 15:32:35 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iok23V70vNwLUo16kyX9ri1cBjc3em8xDV8fAzABZxx3Ioqpzp691146tDm088fUjZCNyZA+YFyGfJCWtlu7HA==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 2416ms (ActiveRecord: 2.7ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 15:32:48 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iok23V70vNwLUo16kyX9ri1cBjc3em8xDV8fAzABZxx3Ioqpzp691146tDm088fUjZCNyZA+YFyGfJCWtlu7HA==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 1885ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 15:33:31 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (4.0ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 15:33:32 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a4IRzpHuL1rarLvO6Q42KlPXgZASmNQH1rx2zOZJoRGWKa26AYQuUY/Ego3O2AxQ8xsKbrXc22pdn/lZYBN9EQ==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 2613ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-16 15:34:39 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.5ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (1.5ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.3ms)
+Completed 200 OK in 25ms (Views: 24.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-16 15:34:41 +0530
+Started GET "/auth/google_oauth2/callback?state=2127d2945f9d6e1334933d526d2c5f0fffce90025eab50a4&code=4/AABt6DXmKAxrw_CaIeDhd7P6QK5zzCkbSLQji0oEAVc48moh2bhmnIRVrK0A7UA3EBoM3NlUVSJdScpIfqzJXwM" for 127.0.0.1 at 2018-03-16 15:34:41 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"2127d2945f9d6e1334933d526d2c5f0fffce90025eab50a4", "code"=>"4/AABt6DXmKAxrw_CaIeDhd7P6QK5zzCkbSLQji0oEAVc48moh2bhmnIRVrK0A7UA3EBoM3NlUVSJdScpIfqzJXwM", "provider"=>"google_oauth2"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "token", "uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ashwini Mandal"], ["email", "ashwini.mandal@cuelogic.com"], ["token", "ya29.GlyABXFM8mn2x7CO-dMnrnuXoqoGZWPLE5MAmLppChETyJe4bZZ0bQpu9fz4odL7B-I3EPQD0aolmXFnY3kdMWevyeHIb7XHWTz8oeE4UxuEfeIuPEgnimS9B-UCgA"], ["uid", "115301852494553111492"], ["created_at", "2018-03-16 10:04:42.802404"], ["updated_at", "2018-03-16 10:04:42.802404"]]
+  [1m[35m (22.0ms)[0m  [1m[35mCOMMIT[0m
+  Rendering base/create.html.erb within layouts/base
+  Rendered base/create.html.erb within layouts/base (0.3ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.6ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.8ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 44ms (Views: 16.0ms | ActiveRecord: 23.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-16 15:35:43 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.3ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.7ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.5ms)
+Completed 200 OK in 22ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-16 15:35:44 +0530
+Started GET "/auth/google_oauth2/callback?state=187624cba349ab76d3a8fe1769909bc59a1874921f326d8b&code=4%2FAADDgL85yOR6Q6AQUubg_s5Nmfp3mC2ck0f2qt2J1sxjQAHN3Kd79mHfmngkBV5UwVHl0OKpIyC-hyiI1iAN-_A" for 127.0.0.1 at 2018-03-16 15:35:51 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"187624cba349ab76d3a8fe1769909bc59a1874921f326d8b", "code"=>"4/AADDgL85yOR6Q6AQUubg_s5Nmfp3mC2ck0f2qt2J1sxjQAHN3Kd79mHfmngkBV5UwVHl0OKpIyC-hyiI1iAN-_A", "provider"=>"google_oauth2"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "token", "uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ashwini Mandal"], ["email", "ashwini.mandal@cuelogic.com"], ["token", "ya29.GlyABYWsN2f1M4cpXXndNN-NnsVBn5avwLcJ7wmjAiDAQRSB-LfZbuMRuVNnmGb_itIgX-j4xo1x_J6NEgORS4nUl75EPpnudYq_dn50rBPjuOIhemu57JcU0KlSHA"], ["uid", "115301852494553111492"], ["created_at", "2018-03-16 10:05:52.311631"], ["updated_at", "2018-03-16 10:05:52.311631"]]
+  [1m[35m (22.6ms)[0m  [1m[35mCOMMIT[0m
+  Rendering base/create.html.erb within layouts/base
+  Rendered base/create.html.erb within layouts/base (0.8ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.5ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.7ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 48ms (Views: 16.9ms | ActiveRecord: 23.9ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 15:38:34 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (3.1ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.5ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 15:38:36 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"axhXPWrWRFcFYTXfga9mwlW+3kSeBusKUszXmks/KhmWs+tJ+rxFXFAJDJymeVy49XJVujlC5GfZ71gPzWX2GQ==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 2071ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 15:39:30 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (4.0ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.7ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 21ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 15:39:31 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vaIgA7gQU0y3TyxoCu64g64C+V2qlQ29H4AYxpM/cJ1ACZx3KHpSR+InFSstOIL5Ds5yow3RAtCUo5dTFWWsnQ==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 1858ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/auth/google_oauth2/callback?state=187624cba349ab76d3a8fe1769909bc59a1874921f326d8b&code=4%2FAADDgL85yOR6Q6AQUubg_s5Nmfp3mC2ck0f2qt2J1sxjQAHN3Kd79mHfmngkBV5UwVHl0OKpIyC-hyiI1iAN-_A" for 127.0.0.1 at 2018-03-16 15:40:21 +0530
+  
+OmniAuth::Strategies::OAuth2::CallbackError (csrf_detected | CSRF detected):
+  
+omniauth (1.8.1) lib/omniauth/failure_endpoint.rb:25:in `raise_out!'
+omniauth (1.8.1) lib/omniauth/failure_endpoint.rb:20:in `call'
+omniauth (1.8.1) lib/omniauth/failure_endpoint.rb:12:in `call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:486:in `fail!'
+omniauth-oauth2 (1.5.0) lib/omniauth/strategies/oauth2.rb:71:in `callback_phase'
+omniauth (1.8.1) lib/omniauth/strategy.rb:236:in `callback_call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:188:in `call!'
+omniauth (1.8.1) lib/omniauth/strategy.rb:168:in `call'
+omniauth (1.8.1) lib/omniauth/builder.rb:63:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+rack (2.0.4) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.4) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.5) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.5) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-03-16 15:40:27 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.7ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.8ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (1.0ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.3ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-16 15:40:33 +0530
+Started GET "/auth/google_oauth2/callback?state=4534895009b542a49234ccccc3ee59c057685016b146dcb8&code=4/AACS_H26uq9BmwVSFVzm7H2PoZKf9M1JkCTPLP0ykmQ1twQCG8cppl_H8XWROP_m6m226ZahsY9DqacW_3Mf0e4" for 127.0.0.1 at 2018-03-16 15:40:33 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"4534895009b542a49234ccccc3ee59c057685016b146dcb8", "code"=>"4/AACS_H26uq9BmwVSFVzm7H2PoZKf9M1JkCTPLP0ykmQ1twQCG8cppl_H8XWROP_m6m226ZahsY9DqacW_3Mf0e4", "provider"=>"google_oauth2"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "token", "uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ashwini Mandal"], ["email", "ashwini.mandal@cuelogic.com"], ["token", "ya29.GlyABe8qL6Ez_U_XggneLBycSDkWrJinYm4kwxEMowh_fuXJTrDGl9-x0gS5BmVchC8wJ22Lf6S3hU-SoGADAnbYSNSgSlf5hHRsokzRhtUmbWS7XlA773gxCw6ZMg"], ["uid", "115301852494553111492"], ["created_at", "2018-03-16 10:10:34.135710"], ["updated_at", "2018-03-16 10:10:34.135710"]]
+  [1m[35m (23.4ms)[0m  [1m[35mCOMMIT[0m
+  Rendering base/create.html.erb within layouts/base
+  Rendered base/create.html.erb within layouts/base (0.4ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 49ms (Views: 20.0ms | ActiveRecord: 24.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-16 15:40:53 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.2ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-16 15:40:56 +0530
+Started GET "/auth/google_oauth2/callback?state=f29f9f899e7641669fa4ab9dd437182f26c79cb58f9e93e9&code=4%2FAAAnRcVRLsSkFfIttwkgj0SLUCFq8IJ82hpq515sQzFXVrRtMFo6_4IjVZSZJqYg0ZCCerHB8p7PNZjhnxFz0RA" for 127.0.0.1 at 2018-03-16 15:41:05 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"f29f9f899e7641669fa4ab9dd437182f26c79cb58f9e93e9", "code"=>"4/AAAnRcVRLsSkFfIttwkgj0SLUCFq8IJ82hpq515sQzFXVrRtMFo6_4IjVZSZJqYg0ZCCerHB8p7PNZjhnxFz0RA", "provider"=>"google_oauth2"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "token", "uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ashwini Mandal"], ["email", "ashwini.mandal@cuelogic.com"], ["token", "ya29.GlyABYe35qH9jGNjst4K4XdGQDILX7O9NkR2VDjdapx6rthqU1VmewPWLt6VjBU94FmnmyfhGDJ7wZT31BqNLlQwaoTSPGRZi2-aIkggLMS0LFGM16gYyYDvXPiXMA"], ["uid", "115301852494553111492"], ["created_at", "2018-03-16 10:11:06.854177"], ["updated_at", "2018-03-16 10:11:06.854177"]]
+  [1m[35m (19.3ms)[0m  [1m[35mCOMMIT[0m
+  Rendering base/create.html.erb within layouts/base
+  Rendered base/create.html.erb within layouts/base (0.7ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.7ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.3ms)
+Completed 200 OK in 44ms (Views: 19.7ms | ActiveRecord: 20.0ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 15:41:08 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (2.2ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.5ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.7ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.3ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 15:41:24 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m7MrYQ4DQ/M2bxrC7C47Z2v2fqAvJFfzB49ytPxAVWtmGJcVnmlC+GMHI4HL+AEdyzr1XohgWJ6MrP0hehqJaw==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 2408ms (ActiveRecord: 0.3ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 15:42:14 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m7MrYQ4DQ/M2bxrC7C47Z2v2fqAvJFfzB49ytPxAVWtmGJcVnmlC+GMHI4HL+AEdyzr1XohgWJ6MrP0hehqJaw==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 1942ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/auth/google_oauth2/callback?state=f29f9f899e7641669fa4ab9dd437182f26c79cb58f9e93e9&code=4%2FAAAnRcVRLsSkFfIttwkgj0SLUCFq8IJ82hpq515sQzFXVrRtMFo6_4IjVZSZJqYg0ZCCerHB8p7PNZjhnxFz0RA" for 127.0.0.1 at 2018-03-16 15:43:00 +0530
+  
+OmniAuth::Strategies::OAuth2::CallbackError (csrf_detected | CSRF detected):
+  
+omniauth (1.8.1) lib/omniauth/failure_endpoint.rb:25:in `raise_out!'
+omniauth (1.8.1) lib/omniauth/failure_endpoint.rb:20:in `call'
+omniauth (1.8.1) lib/omniauth/failure_endpoint.rb:12:in `call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:486:in `fail!'
+omniauth-oauth2 (1.5.0) lib/omniauth/strategies/oauth2.rb:71:in `callback_phase'
+omniauth (1.8.1) lib/omniauth/strategy.rb:236:in `callback_call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:188:in `call!'
+omniauth (1.8.1) lib/omniauth/strategy.rb:168:in `call'
+omniauth (1.8.1) lib/omniauth/builder.rb:63:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+rack (2.0.4) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.4) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.5) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.5) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/auth/google_oauth2/callback?state=f29f9f899e7641669fa4ab9dd437182f26c79cb58f9e93e9&code=4/AAAnDWMbwpVMBhrB8wG-5nxKdzqXvaJQ1mFOTcht2sUQtYdyAwmmEbw-V2HdoS7zdh2OMY9V1xiVW022Yu8ejEs" for 127.0.0.1 at 2018-03-16 15:43:05 +0530
+  
+OmniAuth::Strategies::OAuth2::CallbackError (csrf_detected | CSRF detected):
+  
+omniauth (1.8.1) lib/omniauth/failure_endpoint.rb:25:in `raise_out!'
+omniauth (1.8.1) lib/omniauth/failure_endpoint.rb:20:in `call'
+omniauth (1.8.1) lib/omniauth/failure_endpoint.rb:12:in `call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:486:in `fail!'
+omniauth-oauth2 (1.5.0) lib/omniauth/strategies/oauth2.rb:71:in `callback_phase'
+omniauth (1.8.1) lib/omniauth/strategy.rb:236:in `callback_call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:188:in `call!'
+omniauth (1.8.1) lib/omniauth/strategy.rb:168:in `call'
+omniauth (1.8.1) lib/omniauth/builder.rb:63:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+rack (2.0.4) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.4) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.5) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.5) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-03-16 15:43:11 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.4ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.7ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.5ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 15:43:12 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (3.8ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.5ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 15:43:13 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4+IFfQwWpDRWz6uB8E3ZrJ3J/44uqgSz9dR/1ZZY85geSbkJnHylPwOnksLXm+PWPQV0cInuC95+9/BAEAIvmA==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 986ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 15:44:49 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (147.1ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.2ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.5ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.3ms)
+Completed 200 OK in 181ms (Views: 163.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 15:44:51 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zXY+a5xkOwQZJ0gfDOwNtt2MymeTO65CZvD6edDCWUQw3YIfDA46D0xPcVwrOjfMfUBBmTR/oS/t03XsVpiFRA==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 1931ms (ActiveRecord: 7.5ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 15:47:05 +0530
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 15:47:15 +0530
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 15:47:15 +0530
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 15:47:15 +0530
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 15:47:15 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zXY+a5xkOwQZJ0gfDOwNtt2MymeTO65CZvD6edDCWUQw3YIfDA46D0xPcVwrOjfMfUBBmTR/oS/t03XsVpiFRA==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 1781ms (ActiveRecord: 4.9ms)
+
+
+Processing by BaseController#connectToMail as HTML
+Processing by BaseController#connectToMail as HTML
+Processing by BaseController#connectToMail as HTML
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zXY+a5xkOwQZJ0gfDOwNtt2MymeTO65CZvD6edDCWUQw3YIfDA46D0xPcVwrOjfMfUBBmTR/oS/t03XsVpiFRA==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zXY+a5xkOwQZJ0gfDOwNtt2MymeTO65CZvD6edDCWUQw3YIfDA46D0xPcVwrOjfMfUBBmTR/oS/t03XsVpiFRA==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zXY+a5xkOwQZJ0gfDOwNtt2MymeTO65CZvD6edDCWUQw3YIfDA46D0xPcVwrOjfMfUBBmTR/oS/t03XsVpiFRA==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zXY+a5xkOwQZJ0gfDOwNtt2MymeTO65CZvD6edDCWUQw3YIfDA46D0xPcVwrOjfMfUBBmTR/oS/t03XsVpiFRA==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 1803ms (ActiveRecord: 13.6ms)
+
+
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 1822ms (ActiveRecord: 5.7ms)
+
+
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 1942ms (ActiveRecord: 3.5ms)
+
+
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 2491ms (ActiveRecord: 14.9ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 15:48:05 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zXY+a5xkOwQZJ0gfDOwNtt2MymeTO65CZvD6edDCWUQw3YIfDA46D0xPcVwrOjfMfUBBmTR/oS/t03XsVpiFRA==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 1743ms (ActiveRecord: 3.7ms)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/base/auth/google_oauth2" for 127.0.0.1 at 2018-03-16 15:48:48 +0530
+Started GET "/base/logout" for 127.0.0.1 at 2018-03-16 15:48:58 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/base/auth/google_oauth2"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Processing by BaseController#destroy as HTML
+Started GET "/base/auth/google_oauth2" for 127.0.0.1 at 2018-03-16 15:48:58 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/base/auth/google_oauth2"):
+Redirected to http://localhost:3000/
+  
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-03-16 15:48:58 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.3ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.9ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.8ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 268ms (Views: 266.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-16 15:49:00 +0530
+Started GET "/auth/google_oauth2/callback?state=f24231973b22a3fc0b9403af026d7fb03d91cc14598daf4f&code=4/AACxdyLdt4pu3xfJGswFWT0Rbd2mQEzswi1Ue6z7FXFxP1uxEOty7pTQna_kKqr1CawEPnjpRhelA-0qpb5Huvo" for 127.0.0.1 at 2018-03-16 15:49:00 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"f24231973b22a3fc0b9403af026d7fb03d91cc14598daf4f", "code"=>"4/AACxdyLdt4pu3xfJGswFWT0Rbd2mQEzswi1Ue6z7FXFxP1uxEOty7pTQna_kKqr1CawEPnjpRhelA-0qpb5Huvo", "provider"=>"google_oauth2"}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "token", "uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ashwini Mandal"], ["email", "ashwini.mandal@cuelogic.com"], ["token", "ya29.GlyABRBUP9HRthPuRfr1Xzv1QcITYW4J9pSO4TYeYcC52vrrtuLrTYZazFPbYl6FbO56Y5Sd1LFcaLlWk_HYkOqyjhGwSf_waXyYenHxyuRs3X_IJmBF7OtGeaFIew"], ["uid", "115301852494553111492"], ["created_at", "2018-03-16 10:19:01.514418"], ["updated_at", "2018-03-16 10:19:01.514418"]]
+  [1m[35m (23.2ms)[0m  [1m[35mCOMMIT[0m
+  Rendering base/create.html.erb within layouts/base
+  Rendered base/create.html.erb within layouts/base (0.4ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 49ms (Views: 12.6ms | ActiveRecord: 24.3ms)
+
+
+Started GET "/auth/google_oauth2/auth/google_oauth2" for 127.0.0.1 at 2018-03-16 15:49:03 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/auth/google_oauth2/auth/google_oauth2"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/auth/google_oauth2/auth/google_oauth2" for 127.0.0.1 at 2018-03-16 15:49:06 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/auth/google_oauth2/auth/google_oauth2"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-03-16 15:49:40 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.3ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.5ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.3ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-16 15:49:42 +0530
+Started GET "/auth/google_oauth2/callback?state=75ce551328c2e377125451ba8bb1fbdbb57b2c6eca4179a3&code=4%2FAAC3G3MgaZ7MPSJ_jT8H1dDGbsoeo8XpDVCmKZoiU6kVtbv7u-GAdxWMBD-BRatzEVzfFiS3p85wGfc7rBdC1Qo" for 127.0.0.1 at 2018-03-16 15:49:48 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"75ce551328c2e377125451ba8bb1fbdbb57b2c6eca4179a3", "code"=>"4/AAC3G3MgaZ7MPSJ_jT8H1dDGbsoeo8XpDVCmKZoiU6kVtbv7u-GAdxWMBD-BRatzEVzfFiS3p85wGfc7rBdC1Qo", "provider"=>"google_oauth2"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "token", "uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ashwini Mandal"], ["email", "ashwini.mandal@cuelogic.com"], ["token", "ya29.GlyABYAAnopmQaCAmq0DRWpkeDxDNCc26rT7xt4IucCwq-MnPrXdLWLpY6AVNhCIHsG8Vu8kYBQ5xFoAvdiazm2kxiNCqwHgTMgPJ8gtjACFTNRpFHxO9acfpuCvOw"], ["uid", "115301852494553111492"], ["created_at", "2018-03-16 10:19:49.561596"], ["updated_at", "2018-03-16 10:19:49.561596"]]
+  [1m[35m (78.7ms)[0m  [1m[35mCOMMIT[0m
+  Rendering base/create.html.erb within layouts/base
+  Rendered base/create.html.erb within layouts/base (0.6ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 101ms (Views: 14.5ms | ActiveRecord: 80.1ms)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 15:50:04 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (14.9ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.5ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.3ms)
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 15:50:05 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I1QEe08SzQTDfHGAMUzYDiQjjRbgf4oSaB3KIOvg1H/e/7gP33jMD5YUSMMWmuJ0hO8G6Ec7hX/jPkW1bboIfw==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 2276ms (ActiveRecord: 0.4ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 15:51:24 +0530
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I1QEe08SzQTDfHGAMUzYDiQjjRbgf4oSaB3KIOvg1H/e/7gP33jMD5YUSMMWmuJ0hO8G6Ec7hX/jPkW1bboIfw==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 1766ms (ActiveRecord: 3.7ms)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2018-03-16 16:03:17 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.7ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.1ms)
+Completed 200 OK in 140ms (Views: 134.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 16:03:20 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (14.3ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.2ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 16:03:21 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QpVw05YarklcaFjwx+LjsyiZALmZ3R+aWJSQelFtHra/PsynBnCvQgkAYbPgNNnJiFWLRz6ZEPfTtx/v1zfCtg==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 1960ms (ActiveRecord: 8.1ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 16:07:22 +0530
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 16:07:32 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (2.1ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.5ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QpVw05YarklcaFjwx+LjsyiZALmZ3R+aWJSQelFtHra/PsynBnCvQgkAYbPgNNnJiFWLRz6ZEPfTtx/v1zfCtg==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 1934ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 16:18:10 +0530
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (170.3ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (1.0ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 206ms (Views: 199.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 16:18:12 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qTx+hzVT/9kz2tc1+/eFewWfN9O2SpIIAkkhuHTeH41Ul8LzpTn+0may7nbcIb8BpVO8LREOnWWJaq4t8oTDjQ==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 2457ms (ActiveRecord: 7.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-16 16:19:20 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.4ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.6ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.3ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-16 16:19:21 +0530
+Started GET "/auth/google_oauth2/callback?state=13cac9935adc110fdaab9177f87944be82c491e31f2ea13f&code=4%2FAABuGxVqJMjB6h8A2Tc7cwZR10hQk5QfXCGoNIrwMvOxtpvL1_EougTkPioLUxcgQEHN-bhaZ7VhdpgiIMEyVTw" for 127.0.0.1 at 2018-03-16 16:19:34 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"13cac9935adc110fdaab9177f87944be82c491e31f2ea13f", "code"=>"4/AABuGxVqJMjB6h8A2Tc7cwZR10hQk5QfXCGoNIrwMvOxtpvL1_EougTkPioLUxcgQEHN-bhaZ7VhdpgiIMEyVTw", "provider"=>"google_oauth2"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "token", "uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ashwini Mandal"], ["email", "ashwini.mandal@cuelogic.com"], ["token", "ya29.GlyABSgys46Z4zlHEnBhK6zFBvZx2753VhQe0KfesP7IJjBG-f-bdE4q9Bx6hO3UMXVdu_CQqCXRFk02EVZieBya-DoRUZMMIZRcErmOol2foAo32tn64d5uVhT0eg"], ["uid", "115301852494553111492"], ["created_at", "2018-03-16 10:49:34.951458"], ["updated_at", "2018-03-16 10:49:34.951458"]]
+  [1m[35m (19.3ms)[0m  [1m[35mCOMMIT[0m
+  Rendering base/create.html.erb within layouts/base
+  Rendered base/create.html.erb within layouts/base (0.6ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.5ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 44ms (Views: 19.5ms | ActiveRecord: 19.9ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 16:19:37 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (3.4ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 16:19:43 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GU8IjXMKRK7S00UH3DFH/RagwT5wS15eCUf3N4LTLvXk5LT542BFpYe7fET7532HtmxKwNcPUTOCZHiiBIny9Q==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 1947ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 16:20:11 +0530
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 16:20:21 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (2.1ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Processing by BaseController#connectToMail as HTML
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 16:20:21 +0530
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GU8IjXMKRK7S00UH3DFH/RagwT5wS15eCUf3N4LTLvXk5LT542BFpYe7fET7532HtmxKwNcPUTOCZHiiBIny9Q==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GU8IjXMKRK7S00UH3DFH/RagwT5wS15eCUf3N4LTLvXk5LT542BFpYe7fET7532HtmxKwNcPUTOCZHiiBIny9Q==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 1322ms (ActiveRecord: 2.5ms)
+
+
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 1342ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 16:24:10 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (144.9ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.5ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.3ms)
+Completed 200 OK in 168ms (Views: 162.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 16:24:12 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"78+k4gbyINEnbIwgMihHH9j1tbihU6csEs46K9yjp/YSZBiWlpgh2nIEtWMV/n1leDk+RgYXqEGZ7bW+Wvl79g==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 1766ms (ActiveRecord: 7.6ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 16:24:31 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (2.3ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.2ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 16:24:32 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (2.9ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.5ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 16:24:32 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (2.0ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.5ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.6ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.3ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 16:24:32 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (3.6ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 16:24:32 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (2.7ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.6ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.5ms)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-16 16:30:51 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.2ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-16 16:30:53 +0530
+Started GET "/auth/google_oauth2/callback?state=1a7a6e129ed646f9ee3d96851a3dc2b90d51ae38e6ceb320&code=4/AABbvhqo-NC22m4fuufD0r2prsoOdSrjTgJ4fNn2h-swXamF_t6-xzKEJ69eRwlXTfWzX1CgUVhXASLtj5IBYwg" for 127.0.0.1 at 2018-03-16 16:30:53 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"1a7a6e129ed646f9ee3d96851a3dc2b90d51ae38e6ceb320", "code"=>"4/AABbvhqo-NC22m4fuufD0r2prsoOdSrjTgJ4fNn2h-swXamF_t6-xzKEJ69eRwlXTfWzX1CgUVhXASLtj5IBYwg", "provider"=>"google_oauth2"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "token", "uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ashwini Mandal"], ["email", "ashwini.mandal@cuelogic.com"], ["token", "ya29.GlyABZAk53jLSuD6dzGis0zUcfSWwK8j4YHlyo99p3bIicrgybvo3OTK4xnDqdg1JEl3v53Ml0U1GyUEmt8-3xpk9H7qOcIDuhKesSTy96180Gx_kl45SKFJfxR5BQ"], ["uid", "115301852494553111492"], ["created_at", "2018-03-16 11:00:54.705828"], ["updated_at", "2018-03-16 11:00:54.705828"]]
+  [1m[35m (24.4ms)[0m  [1m[35mCOMMIT[0m
+  Rendering base/create.html.erb within layouts/base
+  Rendered base/create.html.erb within layouts/base (0.5ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 57ms (Views: 15.3ms | ActiveRecord: 27.9ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 16:30:57 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (2.4ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.7ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2/callback?state=1a7a6e129ed646f9ee3d96851a3dc2b90d51ae38e6ceb320&code=4/AABbvhqo-NC22m4fuufD0r2prsoOdSrjTgJ4fNn2h-swXamF_t6-xzKEJ69eRwlXTfWzX1CgUVhXASLtj5IBYwg" for 127.0.0.1 at 2018-03-16 16:31:12 +0530
+  
+OmniAuth::Strategies::OAuth2::CallbackError (csrf_detected | CSRF detected):
+  
+omniauth (1.8.1) lib/omniauth/failure_endpoint.rb:25:in `raise_out!'
+omniauth (1.8.1) lib/omniauth/failure_endpoint.rb:20:in `call'
+omniauth (1.8.1) lib/omniauth/failure_endpoint.rb:12:in `call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:486:in `fail!'
+omniauth-oauth2 (1.5.0) lib/omniauth/strategies/oauth2.rb:71:in `callback_phase'
+omniauth (1.8.1) lib/omniauth/strategy.rb:236:in `callback_call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:188:in `call!'
+omniauth (1.8.1) lib/omniauth/strategy.rb:168:in `call'
+omniauth (1.8.1) lib/omniauth/builder.rb:63:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+rack (2.0.4) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.4) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.5) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.5) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-03-16 16:31:15 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.4ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.5ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.6ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-16 16:31:16 +0530
+Started GET "/auth/google_oauth2/callback?state=49dd41b442c91f8f97728f11a713f7cbe41e1d2e68f9acb2&code=4%2FAAB8YmzV0-2j43A8KwH4FnDMxHjjIcTZjnvfGuuiSadW-t2mmkcNy69PxAq_4uKk9IHr4oJJoDdl9zC2Y5BEFZ8" for 127.0.0.1 at 2018-03-16 16:31:23 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"49dd41b442c91f8f97728f11a713f7cbe41e1d2e68f9acb2", "code"=>"4/AAB8YmzV0-2j43A8KwH4FnDMxHjjIcTZjnvfGuuiSadW-t2mmkcNy69PxAq_4uKk9IHr4oJJoDdl9zC2Y5BEFZ8", "provider"=>"google_oauth2"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "token", "uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ashwini Mandal"], ["email", "ashwini.mandal@cuelogic.com"], ["token", "ya29.GlyABZO0qxydy8OSvQa4qdj48YQk3EICHTqxTyg5d5R99A9vm2YDTqNtsHcBX2sdgeHvb34in3FhUA7v9dgqVvtq-AP5CaYQRoHML6GS4THz3gPOJAOW4JOq_bNcFw"], ["uid", "115301852494553111492"], ["created_at", "2018-03-16 11:01:24.474923"], ["updated_at", "2018-03-16 11:01:24.474923"]]
+  [1m[35m (19.4ms)[0m  [1m[35mCOMMIT[0m
+  Rendering base/create.html.erb within layouts/base
+  Rendered base/create.html.erb within layouts/base (0.6ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.3ms)
+Completed 200 OK in 40ms (Views: 16.5ms | ActiveRecord: 19.8ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 16:31:28 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (3.2ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 16:31:31 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vPyjarfDZBsZ0HhkeKkoYWSVX/JxSgVSPRXDPcYdELpBVx8eJ6llEEy4QSdffxIbxFnUDNYOCj+2NkyoQEfMug==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 1859ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-16 16:35:47 +0530
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.6ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.6ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 154ms (Views: 147.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-16 16:35:49 +0530
+Started GET "/auth/google_oauth2/callback?state=2b29008fbf82f11dc1af48d7bcd64923ab32e33244d30c8b&code=4%2FAACufbuhLHaMjwc2O8vMDtT2CN1uEoD1GvNYmlh11COBBlCtoXb4J67CPPKHeR8-i7se2a5B4pB5KUSE1bLCQAE" for 127.0.0.1 at 2018-03-16 16:35:56 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"2b29008fbf82f11dc1af48d7bcd64923ab32e33244d30c8b", "code"=>"4/AACufbuhLHaMjwc2O8vMDtT2CN1uEoD1GvNYmlh11COBBlCtoXb4J67CPPKHeR8-i7se2a5B4pB5KUSE1bLCQAE", "provider"=>"google_oauth2"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "token", "uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ashwini Mandal"], ["email", "ashwini.mandal@cuelogic.com"], ["token", "ya29.GlyABdwfffoK5s3YUUagUgV7Ne41SVg1pJKMezEwsnA7qBSxpXCeEygbph-5ynWIOAzHWLgZkTueYBhbdRHrxhUcp4jrhtJj8yA-6s7WPnFeR_Toco4xwXsDndTI9g"], ["uid", "115301852494553111492"], ["created_at", "2018-03-16 11:05:57.416971"], ["updated_at", "2018-03-16 11:05:57.416971"]]
+  [1m[35m (22.7ms)[0m  [1m[35mCOMMIT[0m
+  Rendering base/create.html.erb within layouts/base
+  Rendered base/create.html.erb within layouts/base (0.4ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.2ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (1.0ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 82ms (Views: 24.5ms | ActiveRecord: 30.8ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 16:35:59 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (41.0ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 59ms (Views: 57.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 16:36:00 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QpfoDbLEV1MXghAVykLjmOjc1X8Nd5Si3EiX3uDGjrS/PFR5Iq5WWELqKVbtlNniSBBegaozm89XaxhLZpxStA==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 1696ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 16:37:13 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (3.5ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 16:37:15 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zo2Zaquvw40+V6JcIWid2n9qla91jO5BIIHQDh8zNK4zJiUeO8XChms/mx8Gvqeg36YeUdLI4Syrol+bmWnorg==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 1731ms (ActiveRecord: 3.3ms)
+
+
+  
+NoMethodError (undefined method `all' for Gmail::Message:Class):
+  
+app/models/user.rb:12:in `connectToGmail'
+app/controllers/base_controller.rb:32:in `connectToMail'
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 16:37:51 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (155.8ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.2ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (1.0ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.9ms)
+Completed 200 OK in 184ms (Views: 177.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 16:37:52 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ch8jlxqY53b5lx3jIDgViSsGM9xozDSKiWoHiYPawQj3tJ/jivLmfaz/JKAH7i/zi8q4Is+IO+cCSYgcBYAdCA==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 7.1ms)
+
+
+  
+TypeError (no implicit conversion of Symbol into String):
+  
+app/models/user.rb:7:in `connectToGmail'
+app/controllers/base_controller.rb:32:in `connectToMail'
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 16:38:16 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ch8jlxqY53b5lx3jIDgViSsGM9xozDSKiWoHiYPawQj3tJ/jivLmfaz/JKAH7i/zi8q4Is+IO+cCSYgcBYAdCA==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 1761ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 16:38:22 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (193.0ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 227ms (Views: 226.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 16:38:23 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pgBVkxDLm6BeZrS+Je4xH4dojrq8Z/Z5OcN0EhrO+hxbq+nngKGaqwsOjf0COAtlJ6QFRBsj+RSy4PuHnJQmHA==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 16:38:24 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pgBVkxDLm6BeZrS+Je4xH4dojrq8Z/Z5OcN0EhrO+hxbq+nngKGaqwsOjf0COAtlJ6QFRBsj+RSy4PuHnJQmHA==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 2358ms (ActiveRecord: 3.2ms)
+
+
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 1741ms (ActiveRecord: 3.2ms)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2018-03-16 16:50:18 +0530
+Processing by BaseController#index as HTML
+Started GET "/" for 127.0.0.1 at 2018-03-16 16:50:28 +0530
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.2ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.2ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.5ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+
+
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.0ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.0ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.1ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-16 16:50:34 +0530
+Started GET "/auth/google_oauth2/callback?state=6a71b6e58e2fee80a038726ca2c7c35ffe89be63556e7b23&code=4/AAADzjEK4hKqhdTvn-LNwhUhFtBI9YzW6ERQOi8uCf-Jcsei8wWHRpyMNZsSJq76EWXAb3Oe9FDn1GSdD162e-o" for 127.0.0.1 at 2018-03-16 16:50:34 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"6a71b6e58e2fee80a038726ca2c7c35ffe89be63556e7b23", "code"=>"4/AAADzjEK4hKqhdTvn-LNwhUhFtBI9YzW6ERQOi8uCf-Jcsei8wWHRpyMNZsSJq76EWXAb3Oe9FDn1GSdD162e-o", "provider"=>"google_oauth2"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `auth_hash' for "token":String):
+  
+app/controllers/base_controller.rb:11:in `create'
+Started GET "/auth/google_oauth2/callback?state=6a71b6e58e2fee80a038726ca2c7c35ffe89be63556e7b23&code=4/AAADzjEK4hKqhdTvn-LNwhUhFtBI9YzW6ERQOi8uCf-Jcsei8wWHRpyMNZsSJq76EWXAb3Oe9FDn1GSdD162e-o" for 127.0.0.1 at 2018-03-16 16:51:11 +0530
+  
+OAuth2::Error (invalid_grant: Code was already redeemed.
+{
+  "error" : "invalid_grant",
+  "error_description" : "Code was already redeemed."
+}):
+  
+oauth2 (1.4.0) lib/oauth2/client.rb:119:in `request'
+oauth2 (1.4.0) lib/oauth2/client.rb:146:in `get_token'
+oauth2 (1.4.0) lib/oauth2/strategy/auth_code.rb:30:in `get_token'
+omniauth-google-oauth2 (0.5.3) lib/omniauth/strategies/google_oauth2.rb:120:in `get_access_token'
+omniauth-google-oauth2 (0.5.3) lib/omniauth/strategies/google_oauth2.rb:94:in `custom_build_access_token'
+omniauth-oauth2 (1.5.0) lib/omniauth/strategies/oauth2.rb:73:in `callback_phase'
+omniauth (1.8.1) lib/omniauth/strategy.rb:236:in `callback_call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:188:in `call!'
+omniauth (1.8.1) lib/omniauth/strategy.rb:168:in `call'
+omniauth (1.8.1) lib/omniauth/builder.rb:63:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+rack (2.0.4) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.4) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.5) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.5) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-03-16 16:51:14 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.2ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-16 16:51:15 +0530
+Started GET "/auth/google_oauth2/callback?state=f677633d51ecf3f2e5584b2849dd6e50fe4c081acbeb8f4f&code=4/AAD3QMqS5j03upUWscrtXIt2ai25qNrNlDzd7PVybAwn_0ZvnPzenh_rP2FAj4R3ULNV541h8Y3wLrdVUUNRyxA" for 127.0.0.1 at 2018-03-16 16:51:16 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"f677633d51ecf3f2e5584b2849dd6e50fe4c081acbeb8f4f", "code"=>"4/AAD3QMqS5j03upUWscrtXIt2ai25qNrNlDzd7PVybAwn_0ZvnPzenh_rP2FAj4R3ULNV541h8Y3wLrdVUUNRyxA", "provider"=>"google_oauth2"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "token", "uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ashwini Mandal"], ["email", "ashwini.mandal@cuelogic.com"], ["token", "ya29.GlyABRQ-MvYNQIigUoCmzQZW18FqYI2muWwB7w-IYK1THi37LQ4A-0wwI6Qbyq_7BxH7UybMpJM3VqJOOjY1Dt-fd2zxZW-8gKsLNTXWMCLG5skRbRPBJWV2Ig-NJg"], ["uid", "115301852494553111492"], ["created_at", "2018-03-16 11:21:17.106026"], ["updated_at", "2018-03-16 11:21:17.106026"]]
+  [1m[35m (24.3ms)[0m  [1m[35mCOMMIT[0m
+  Rendering base/create.html.erb within layouts/base
+  Rendered base/create.html.erb within layouts/base (0.4ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.8ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.3ms)
+Completed 200 OK in 56ms (Views: 15.4ms | ActiveRecord: 27.2ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 16:51:18 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (3.5ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 16:51:25 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kr+ujKL2IsYeUCrnTrSnjefD5obkQDyNkUWVoBbfGqtvFBL4MpwjzUs4E6RpYp33Rw9teEMEM+AaZho1kIXGqw==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 1750ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-16 16:58:46 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.2ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.6ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.4ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-16 16:58:46 +0530
+Started GET "/auth/google_oauth2/callback?state=9d890023efa69a949584683c0caccc60686d748b87f1e5b0&code=4%2FAADGj_idiQt3RfpdikkRnyXsP3GQiGckqKfE97folnvTAoPF6Ne8q0OhuG92dIs7dPnTYsQEmwYb_4UWL483mfs" for 127.0.0.1 at 2018-03-16 16:58:53 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"9d890023efa69a949584683c0caccc60686d748b87f1e5b0", "code"=>"4/AADGj_idiQt3RfpdikkRnyXsP3GQiGckqKfE97folnvTAoPF6Ne8q0OhuG92dIs7dPnTYsQEmwYb_4UWL483mfs", "provider"=>"google_oauth2"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "token", "uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ashwini Mandal"], ["email", "ashwini.mandal@cuelogic.com"], ["token", "ya29.GlyABVH2--JUhlp8YaVc65Bu3pt51Mi5_Dp0k6mOY9IZQazDcO_X-KCNGVnGIA3iGWgAnioQF1agizSfy2GQLTEJ2ZEafdOJ94xgdfE5vF3DY8LNpQvDAR6Bvp3pDQ"], ["uid", "115301852494553111492"], ["created_at", "2018-03-16 11:28:54.692362"], ["updated_at", "2018-03-16 11:28:54.692362"]]
+  [1m[35m (13.1ms)[0m  [1m[35mCOMMIT[0m
+  Rendering base/create.html.erb within layouts/base
+  Rendered base/create.html.erb within layouts/base (0.4ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.6ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.3ms)
+Completed 200 OK in 37ms (Views: 13.6ms | ActiveRecord: 13.6ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-16 16:58:57 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (2.8ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.6ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-16 16:58:58 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yB6lAmKDnEfj6tvaJR05PcemyghdpZ61o2KaLSy3Ae01tRl28umdTLaC4pkCywNHZ2pB9vrhkdgoQRW4qu3d7Q==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 2009ms (ActiveRecord: 0.3ms)
+
+
