@@ -1,0 +1,23 @@
+<html>
+<header>
+<%= stylesheet_link_tag 'base' %>
+<%= stylesheet_link_tag 'base_layout/bootstrap.min.css' %>
+<%= javascript_include_tag 'base_layout/jquery.min.js' %>
+<%= javascript_include_tag 'base_layout/bootstrap.min.js' %>
+</header>
+<body>
+  <%= render template: 'layouts/partial/base/nav' %>
+  
+<div class="container-fluid text-center">    
+<div class="row content">
+<%= render template: 'layouts/partial/base/left_side_nav' %>
+<%= yield %>
+  <div class="col-sm-8 text-left"> 
+
+  </div>
+</div>
+</div>
+<%= render template: 'layouts/partial/base/footer' %>
+<%= yield %>
+</body>
+</html>
