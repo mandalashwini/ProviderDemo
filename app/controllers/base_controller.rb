@@ -5,11 +5,6 @@ class BaseController < ApplicationController
 
   def create
     auth_hash=request.env['omniauth.auth']
-    puts auth_hash
-    puts "hfhghfd"
-    puts auth_hash.info
-    puts "yy",auth_hash.uid
-    session[:token]=auth_hash.credentials.token
     session[:uid]=auth_hash.uid
     user=User.new(name:auth_hash.info[:name],email:auth_hash.info[:email],token:auth_hash.credentials.token,uid:auth_hash.uid)
     user.save
@@ -26,12 +21,13 @@ class BaseController < ApplicationController
 
 
   def ckeditorView
+    puts "oo"
   end
   
   def connectToMail
-    require 'gmail'
-    puts "hello"
+    puts "yyy"
     User.connectToGmail
-     puts "rrr"
+    puts "rrr"
   end
+  
 end
