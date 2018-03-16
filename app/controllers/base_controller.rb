@@ -19,7 +19,6 @@ class BaseController < ApplicationController
   def destroy
    puts session[:uid]
     session[:uid]=nil
-    session[:token]=nil
     puts "sdf"
     puts session[:uid]
     redirect_to root_path
@@ -27,6 +26,12 @@ class BaseController < ApplicationController
 
 
   def ckeditorView
-    puts params.inspect
+  end
+  
+  def connectToMail
+    require 'gmail'
+    puts "hello"
+    User.connectToGmail
+     puts "rrr"
   end
 end

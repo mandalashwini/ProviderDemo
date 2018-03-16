@@ -1,7 +1,6 @@
-class User < ApplicationRecord
+class MailOperations
     require 'gmail'
-   
-    def self.connectToGmail
+    def self.connectToMail
         gmail=Gmail.connect(:xoauth2,User.email,User.token)
         puts "jj",gmail
     end
