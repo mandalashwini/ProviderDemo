@@ -18,7 +18,6 @@ class BaseController < ApplicationController
   def destroy
    puts session[:uid]
     session[:uid]=nil
-    puts "sdf"
     puts session[:uid]
     redirect_to root_path
   end
@@ -31,7 +30,9 @@ class BaseController < ApplicationController
   def connectToMail
     puts "yyy"
     User.connectToGmail
-    puts "rrr"
+    User.sendMail
+    puts params.inspect
   end
+
   
 end

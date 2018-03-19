@@ -22667,3 +22667,251 @@ No template found for BaseController#connectToMail, rendering head :no_content
 Completed 204 No Content in 2009ms (ActiveRecord: 0.3ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-03-19 11:27:19 +0530
+  [1m[35m (13.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (7.9ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (1.0ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.5ms)
+Completed 200 OK in 2100ms (Views: 2083.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-19 11:27:24 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (133.4ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.5ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 153ms (Views: 145.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-19 11:27:38 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1eu5ZmbUoLDNcgnOUYn3fFnOP5a6cRUCLBXn5ZlUcGVwInRqMWkdRJ/jNLUZ/AheQ8pRdbghrQ+Dz5gjDPhjEw==", "users"=>{"to"=>"as", "subject"=>"", "content"=>"<p>dsfs</p>"}, "commit"=>"compose"}
+  [1m[36mUser Load (101.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 2800ms (ActiveRecord: 110.6ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-19 11:28:31 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (2.2ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.7ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.3ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-19 11:28:44 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/m4Nug//3V1GteaWiUDuu/xcCAecKxeoy1aoMXE3zdBbp8C2WEJgqRQk2+3BNRGZ5lhm5J57r6VkjNf35Jvepg==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 1901ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-19 11:31:26 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (2.6ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.9ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.4ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-19 11:31:28 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bpDzfc7x+4GQcDyWxi3b6A4aNmXIFIXc6/kLLKWMhn3LWT5xmUxGdcLhAe2OWCTKFB5YhspEPdFEI3TqMCCVCw==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 2431ms (ActiveRecord: 0.4ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-19 11:34:02 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bpDzfc7x+4GQcDyWxi3b6A4aNmXIFIXc6/kLLKWMhn3LWT5xmUxGdcLhAe2OWCTKFB5YhspEPdFEI3TqMCCVCw==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 2411ms (ActiveRecord: 0.2ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-19 11:34:53 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bpDzfc7x+4GQcDyWxi3b6A4aNmXIFIXc6/kLLKWMhn3LWT5xmUxGdcLhAe2OWCTKFB5YhspEPdFEI3TqMCCVCw==", "users"=>{"to"=>"asdsa", "subject"=>"sda", "content"=>"<p>sdsa</p>"}, "commit"=>"compose"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 1733ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-19 11:44:39 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.3ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-19 11:44:40 +0530
+Started GET "/auth/google_oauth2/callback?state=6b5af980b6783c39ee709833c62845a9c1e74ad25fb8d304&code=4%2FAACb-OYzd01x_3yshhKjSmJpIp8LmQqH4xwgxk1kx7m0Jg1E_91LZDu1wZH9G5XvLKkFhoGarf2YsQhIVo8dmvQ" for 127.0.0.1 at 2018-03-19 11:44:48 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"6b5af980b6783c39ee709833c62845a9c1e74ad25fb8d304", "code"=>"4/AACb-OYzd01x_3yshhKjSmJpIp8LmQqH4xwgxk1kx7m0Jg1E_91LZDu1wZH9G5XvLKkFhoGarf2YsQhIVo8dmvQ", "provider"=>"google_oauth2"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (15.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "token", "uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ashwini Mandal"], ["email", "ashwini.mandal@cuelogic.com"], ["token", "ya29.GlyDBXwpJIY5ymYL8q4LtXsp6yebQFvuQpMWdF87UY3D1o8gpPiQ9DrOnYIQ92goKFDOzuwiOz4glwrPC3xo9AjFiRA31EbbdyP0q0_q5HJGLDlQ02cremflRHNcaQ"], ["uid", "115301852494553111492"], ["created_at", "2018-03-19 06:14:49.214732"], ["updated_at", "2018-03-19 06:14:49.214732"]]
+  [1m[35m (32.2ms)[0m  [1m[35mCOMMIT[0m
+  Rendering base/create.html.erb within layouts/base
+  Rendered base/create.html.erb within layouts/base (0.5ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.7ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (1.2ms)
+Completed 200 OK in 104ms (Views: 18.2ms | ActiveRecord: 47.4ms)
+
+
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-19 11:44:51 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (3.0ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.2ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-19 11:44:53 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dvRxeBU3OkX3jzUFFE49NP7TZ8Wp37GnG4kI99GPmyHTPbx0QoqHsaUeCH5cO8IW5NcJJquPCaq0U3cxRCOIVw==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 2383ms (ActiveRecord: 0.4ms)
+
+
+  
+Gmail::Client::AuthorizationError (Couldn't login to given Gmail account: ashwini.mandal@cuelogic.com (Invalid credentials (Failure))):
+  
+app/models/user.rb:7:in `connectToGmail'
+app/controllers/base_controller.rb:32:in `connectToMail'
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-19 11:49:34 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dvRxeBU3OkX3jzUFFE49NP7TZ8Wp37GnG4kI99GPmyHTPbx0QoqHsaUeCH5cO8IW5NcJJquPCaq0U3cxRCOIVw==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 2343ms (ActiveRecord: 3.4ms)
+
+
+  
+Gmail::Client::AuthorizationError (Couldn't login to given Gmail account: ashwini.mandal@cuelogic.com (Invalid credentials (Failure))):
+  
+app/models/user.rb:7:in `connectToGmail'
+app/controllers/base_controller.rb:32:in `connectToMail'
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-19 11:49:40 +0530
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (3.9ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.3ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.5ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.3ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-19 11:49:41 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hi6T3/Yevj6F9SUWzpfvYU4IPLW6PTzrivHiDn1NEr+7517ToaMDytdkGG2G4hBDVAxSVrhthOYlK53I6OEByQ==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 1869ms (ActiveRecord: 0.3ms)
+
+
+  
+Gmail::Client::AuthorizationError (Couldn't login to given Gmail account: ashwini.mandal@cuelogic.com (Invalid credentials (Failure))):
+  
+app/models/user.rb:7:in `connectToGmail'
+app/controllers/base_controller.rb:32:in `connectToMail'
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-19 11:49:53 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hi6T3/Yevj6F9SUWzpfvYU4IPLW6PTzrivHiDn1NEr+7517ToaMDytdkGG2G4hBDVAxSVrhthOYlK53I6OEByQ==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 1760ms (ActiveRecord: 2.3ms)
+
+
+  
+Gmail::Client::AuthorizationError (Couldn't login to given Gmail account: ashwini.mandal@cuelogic.com (Invalid credentials (Failure))):
+  
+app/models/user.rb:7:in `connectToGmail'
+app/controllers/base_controller.rb:32:in `connectToMail'
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-19 11:51:35 +0530
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hi6T3/Yevj6F9SUWzpfvYU4IPLW6PTzrivHiDn1NEr+7517ToaMDytdkGG2G4hBDVAxSVrhthOYlK53I6OEByQ==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 1763ms (ActiveRecord: 3.5ms)
+
+
+  
+Gmail::Client::AuthorizationError (Couldn't login to given Gmail account: ashwini.mandal@cuelogic.com (Invalid credentials (Failure))):
+  
+app/models/user.rb:7:in `connectToGmail'
+app/controllers/base_controller.rb:32:in `connectToMail'
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-19 11:51:49 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hi6T3/Yevj6F9SUWzpfvYU4IPLW6PTzrivHiDn1NEr+7517ToaMDytdkGG2G4hBDVAxSVrhthOYlK53I6OEByQ==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/base/ckeditorView" for 127.0.0.1 at 2018-03-19 11:51:59 +0530
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 1866ms (ActiveRecord: 0.3ms)
+
+
+Processing by BaseController#ckeditorView as HTML
+  Rendering base/ckeditorView.html.erb within layouts/base
+  Rendered base/ckeditorView.html.erb within layouts/base (193.0ms)
+  Rendering layouts/partial/base/nav.html.erb
+  Rendered layouts/partial/base/nav.html.erb (0.4ms)
+  Rendering layouts/partial/base/left_side_nav.html.erb
+  Rendered layouts/partial/base/left_side_nav.html.erb (0.7ms)
+  Rendering layouts/partial/base/footer.html.erb
+  Rendered layouts/partial/base/footer.html.erb (0.3ms)
+Completed 200 OK in 216ms (Views: 214.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-19 11:52:02 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bu9oGXutPMAv39pcKjR/WxUqp5avV7V5FW8XEZ/ZW5ejJqUVLBCBNH1O5ydiQYB5Dy7Jda0HDXS6tWjXCnVI4Q==", "users"=>{"to"=>"", "subject"=>"", "content"=>""}, "commit"=>"compose"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 1916ms (ActiveRecord: 0.3ms)
+
+
+Started POST "/base/connectToMail" for 127.0.0.1 at 2018-03-19 11:52:17 +0530
+Processing by BaseController#connectToMail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bu9oGXutPMAv39pcKjR/WxUqp5avV7V5FW8XEZ/ZW5ejJqUVLBCBNH1O5ydiQYB5Dy7Jda0HDXS6tWjXCnVI4Q==", "users"=>{"to"=>"sdsf", "subject"=>"", "content"=>"<p>dsf</p>"}, "commit"=>"compose"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+No template found for BaseController#connectToMail, rendering head :no_content
+Completed 204 No Content in 2632ms (ActiveRecord: 0.7ms)
+
+
