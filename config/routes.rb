@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root 'base#index'
    get 'base/ckeditorView',:to =>'base#ckeditorView'
    post 'base/connectToMail'
+   get 'base/displaySentMail'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   match 'auth/:provider/callback',:to => 'base#create',:via =>[:get,:post]
   mount Ckeditor::Engine => '/ckeditor'
