@@ -4,7 +4,7 @@
         <%= form_for :users ,:url => '/base/connectToMail',:method =>'post' do |f|%>
             <div class="col-sm-4">
                 <%= f.label :"to :" %>
-                <%= f.text_field :to ,size:50%><br><br>
+                <%= f.email_field(:to ,size:50)%><br><br>
                 <%= f.label :"subject :" %>
                 <%= f.text_field :subject,size:50 %><br><br>
                 <%=f.label :"content :"%><br>

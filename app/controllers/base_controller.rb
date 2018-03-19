@@ -28,11 +28,11 @@ class BaseController < ApplicationController
   end
   
   def connectToMail
-    puts "yyy"
-    User.connectToGmail
-    User.sendMail
-    puts params.inspect
+    @gmail=User.loginGmail    
+    User.sendMail(@gmail,params[:users])
   end
+
+
 
   
 end

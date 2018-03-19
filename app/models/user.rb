@@ -1,20 +1,19 @@
 class User < ApplicationRecord
-    require 'gmail'
     
-
-    def self.connectToGmail
-       user=User.last
-       gmail=Gmail.connect(:xoauth2,user[:email],user[:token])
-      #gmail=Gmail.connect('ashwini.mandal@cuelogic.com','Cuelogic')
-       puts user[:email]
-       puts user[:token]
-       puts "jj",gmail.inspect
-       #puts gmail.inbox.count
-        
+    def self.loginGmail
+        return self != nil ? Gmail.connect('ashwini.mandal@cuelogic.com','Cuelogic') : nil
     end
 
-    def self.sendMail
-
-        
+    def self.sendMail(gmail,usersData)
+        email=gmail.compose do
+                to "#{usersData[:to]}"
+                subject "#{usersData[:subject]}"
+                body "#{usersData[:content]}"
+        end
+       if  email.deliver! 
+        puts "success"
+       else
+        puts "fail.."
+       end
     end
 end
