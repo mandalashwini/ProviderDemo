@@ -17,20 +17,41 @@ class User < ApplicationRecord
     def self.sentMails(gmail)
         sent=gmail.labels.localize(:sent)
         puts "yyyy"
-        puts gmail.mailbox(sent).emails[0].message
-        binding.pry
-       puts JSON.parse(gmail.mailbox(sent).emails[0].message)
+        puts gmail.mailbox(sent).emails[0]
+        #binding.pry
+       #puts gmail.mailbox(sent).emails[0].message
       
     end
 
-    def self.getMailDetails
+    def self.validateAccessToken
+            user=User.last
+         timeDiff=((user.expiresat.to_time)-Time.now).to_i 
+           time=timeDiff/3600
+    end
+
+    def self.setExpireAtFormat(expiresAt)
+        time=expiresAt.to_i
+        puts "xxxx",expiresAt
+        expires_at=Time.at(time)
+    end
+
+
+    def self.getAccessToken
       
         user=User.last
-       # puts user[:token]
-        #response = RestClient.get("https://www.googleapis.com/gmail/v1/users/#{user[:email]}/threads?labelIds=SENT&pageToken=2&maxResults=50&accessToken=#{user[:token]}")
         response = JSON.parse(RestClient.post 'https://accounts.google.com/o/oauth2/token', grant_type: 'refresh_token',
 refresh_token:"#{user[:refreshtoken]}", client_id: '717036620525-f042ht0i5m4a42a4hr65m93ingvdt3rq.apps.googleusercontent.com',
-client_secret: 'XGPQzwQGzIsTImllNsgOOgD4') 
-        puts response
+client_secret: 'XGPQzwQGzIsTImllNsgOOgD4') rescue nil
+         response['access_token']
     end
+       
+    
+    
+    def self.getMailThreads
+            user=User.last
+            email=user.email
+            token=user[:token]
+        response = RestClient.get("https://www.googleapis.com/gmail/v1/users/#{email}/threads?labelIds=SENT&accessToken=#{token}")
+        puts response
+     end
 end

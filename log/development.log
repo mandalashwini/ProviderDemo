@@ -29509,3 +29509,1750 @@ Completed 200 OK in 41ms (Views: 18.2ms | ActiveRecord: 18.0ms)
   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (41.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6995684588039819805)[0m
+  [1m[35m (22.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAccesstokenToUser (20180320055403)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (91.9ms)[0m  [1m[35mALTER TABLE "users" ADD "accesstoken" character varying[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180320055403"]]
+  [1m[35m (35.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (43.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6995684588039819805)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6995684588039819805)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddExpiresatToUsers (20180320062823)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "expiresat" date[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180320062823"]]
+  [1m[35m (19.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6995684588039819805)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2018-03-20 12:06:07 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (1.2ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.4ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.7ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.3ms)
+Completed 200 OK in 1626ms (Views: 1610.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-20 12:06:14 +0530
+Started GET "/auth/google_oauth2/callback?state=ea343a4bbe015271d9cef726ce28100f1baa8776f0906de4&code=4/AAB63ZTDkomhSwcpx43gsm3EUB-BE-SEuopjw9rY7UmnnObjV2je-bHwQ1v--qbhT5FO17uCWUn4XzxJw2BWT2M" for 127.0.0.1 at 2018-03-20 12:06:15 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"ea343a4bbe015271d9cef726ce28100f1baa8776f0906de4", "code"=>"4/AAB63ZTDkomhSwcpx43gsm3EUB-BE-SEuopjw9rY7UmnnObjV2je-bHwQ1v--qbhT5FO17uCWUn4XzxJw2BWT2M", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 363ms (ActiveRecord: 3.2ms)
+
+
+  
+NameError (undefined local variable or method `o' for #<BaseController:0x007f4f1e4bc7a0>):
+  
+app/controllers/base_controller.rb:19:in `create'
+Started GET "/auth/google_oauth2/callback?state=ea343a4bbe015271d9cef726ce28100f1baa8776f0906de4&code=4/AAB63ZTDkomhSwcpx43gsm3EUB-BE-SEuopjw9rY7UmnnObjV2je-bHwQ1v--qbhT5FO17uCWUn4XzxJw2BWT2M" for 127.0.0.1 at 2018-03-20 12:06:32 +0530
+Started GET "/auth/failure?message=invalid_credentials&origin=http%3A%2F%2Flocalhost%3A3000%2F&strategy=google_oauth2" for 127.0.0.1 at 2018-03-20 12:06:33 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/auth/failure"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+rack (2.0.4) lib/rack/handler/webrick.rb:86:in `service'
+/home/ashwini/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/home/ashwini/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/home/ashwini/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+Started GET "/" for 127.0.0.1 at 2018-03-20 12:06:38 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.4ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.4ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.8ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.3ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-20 12:06:39 +0530
+Started GET "/auth/google_oauth2/callback?state=2ab8e2019143535ec73650611d656fc721e3507786a16f8b&code=4/AABKkK7oabhe_I5ZvFdEmGdzW09s7MFw5sTFfedY4B8-K9bTs2cbJnRP8JjS-ZP62pFvRsQQg4hHcSgu0Tvk3oY" for 127.0.0.1 at 2018-03-20 12:06:39 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"2ab8e2019143535ec73650611d656fc721e3507786a16f8b", "code"=>"4/AABKkK7oabhe_I5ZvFdEmGdzW09s7MFw5sTFfedY4B8-K9bTs2cbJnRP8JjS-ZP62pFvRsQQg4hHcSgu0Tvk3oY", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (56.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "token", "uid", "created_at", "updated_at", "accesstoken") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Ashwini Mandal"], ["email", "ashwini.mandal@cuelogic.com"], ["token", "ya29.GlyEBSh_-qd7a9igOV4-txBzh5QimEyfrXQZY1i32LOx2y5Fp3pYIifSUJ9PYgG7hJuGC_eeyr6w1u8OZLA9pKozRF3RMcU6Au-z-_oXHFOYLsZDLlvyJQi7URGTjA"], ["uid", "115301852494553111492"], ["created_at", "2018-03-20 06:36:41.079676"], ["updated_at", "2018-03-20 06:36:41.079676"], ["accesstoken", "2018-03-20 07:35:41 UTC"]]
+  [1m[35m (41.2ms)[0m  [1m[35mCOMMIT[0m
+  Rendering base/create.html.erb within layouts/base
+  Rendered base/create.html.erb within layouts/base (0.6ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.3ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.5ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.3ms)
+Completed 200 OK in 479ms (Views: 16.7ms | ActiveRecord: 99.9ms)
+
+
+Started GET "/auth/google_oauth2/callback?state=2ab8e2019143535ec73650611d656fc721e3507786a16f8b&code=4/AABKkK7oabhe_I5ZvFdEmGdzW09s7MFw5sTFfedY4B8-K9bTs2cbJnRP8JjS-ZP62pFvRsQQg4hHcSgu0Tvk3oY" for 127.0.0.1 at 2018-03-20 12:08:22 +0530
+Started GET "/auth/failure?message=csrf_detected&strategy=google_oauth2" for 127.0.0.1 at 2018-03-20 12:08:22 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/auth/failure"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+rack (2.0.4) lib/rack/handler/webrick.rb:86:in `service'
+/home/ashwini/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/home/ashwini/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/home/ashwini/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+Started GET "/" for 127.0.0.1 at 2018-03-20 12:08:26 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.3ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.4ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.7ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.3ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-20 12:08:27 +0530
+Started GET "/auth/google_oauth2/callback?state=a77f163985e583431f946f3a55ff09a1e3e983c21d75b8e9&code=4/AABxghdmAytTksFDnm3oQJGtk-rLGctzFnsflfLOEr-QEHMz5eW50RCWpctg3G-9k8qosgvXcNFeoLHmu6L47DU" for 127.0.0.1 at 2018-03-20 12:08:32 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"a77f163985e583431f946f3a55ff09a1e3e983c21d75b8e9", "code"=>"4/AABxghdmAytTksFDnm3oQJGtk-rLGctzFnsflfLOEr-QEHMz5eW50RCWpctg3G-9k8qosgvXcNFeoLHmu6L47DU", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 322ms (ActiveRecord: 5.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/models/user.rb:34:in `getAccessToken'
+app/controllers/base_controller.rb:18:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2018-03-20 12:09:33 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.3ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.5ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.8ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.3ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-20 12:09:34 +0530
+Started GET "/auth/google_oauth2/callback?state=7a815875d8fe1ccebb3525037e16e6fb1b9915780890f0ed&code=4%2FAACbizoQaIf3VQtf8ICyY_K5UNKysll9A2psMdRBAmmk-_5xWkeln6QOWmCu1Wc8mPUk7H7NjZrqGITU_g0z7C0" for 127.0.0.1 at 2018-03-20 12:09:41 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"7a815875d8fe1ccebb3525037e16e6fb1b9915780890f0ed", "code"=>"4/AACbizoQaIf3VQtf8ICyY_K5UNKysll9A2psMdRBAmmk-_5xWkeln6QOWmCu1Wc8mPUk7H7NjZrqGITU_g0z7C0", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 247ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/models/user.rb:34:in `getAccessToken'
+app/controllers/base_controller.rb:18:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2018-03-20 12:11:35 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.3ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.4ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (1.2ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.3ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-20 12:11:38 +0530
+Started GET "/auth/google_oauth2/callback?state=9a905b27a49cb7c3ce62eb8926d196b68bbfd306875c3503&code=4/AACP9r4UezSqAQ2ksABbh_KgkNTLdGURd8BERiC4DAR7lXKW1p8bOUfi5dGTCaXAsuOviwqN7GmmUy2DhHs0hvY" for 127.0.0.1 at 2018-03-20 12:11:41 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"9a905b27a49cb7c3ce62eb8926d196b68bbfd306875c3503", "code"=>"4/AACP9r4UezSqAQ2ksABbh_KgkNTLdGURd8BERiC4DAR7lXKW1p8bOUfi5dGTCaXAsuOviwqN7GmmUy2DhHs0hvY", "provider"=>"google_oauth2"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "token", "uid", "created_at", "updated_at", "refreshtoken") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Ashwini Mandal"], ["email", "ashwini.mandal@cuelogic.com"], ["token", "ya29.GluEBdeRrNozGuq9fQ2k09OKHGKBZRM-4mGvYI2m89PvavjDg7Cxzq1ChvHYHWOfM_NSvaUdHi5MIvZF_0uYIbXKZCHz0-0okx7MX1QphALbcAMTv4nW58b1rGvO"], ["uid", "115301852494553111492"], ["created_at", "2018-03-20 06:41:41.987284"], ["updated_at", "2018-03-20 06:41:41.987284"], ["refreshtoken", "1/9yzN7n83shdl8O7GoLzzOofnC-3mSuuR7irxpOy_3aE"]]
+  [1m[35m (29.4ms)[0m  [1m[35mCOMMIT[0m
+  Rendering base/create.html.erb within layouts/base
+  Rendered base/create.html.erb within layouts/base (0.3ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.4ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.8ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.3ms)
+Completed 200 OK in 54ms (Views: 18.8ms | ActiveRecord: 30.0ms)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ashwini.mandal@cuelogic.com"], ["LIMIT", 11]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ashwini.mandal@cuelogic.com"], ["LIMIT", 11]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1[0m  [["email", "ashwini.mandal@cuelogic.com"]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 25]]
+  [1m[35m (22.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 26]]
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 27]]
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 28]]
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 29]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 30]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 31]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 32]]
+  [1m[35m (7.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 33]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 34]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 35]]
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 37]]
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 38]]
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 39]]
+  [1m[35m (7.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 40]]
+  [1m[35m (7.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 41]]
+  [1m[35m (7.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 42]]
+  [1m[35m (7.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 43]]
+  [1m[35m (7.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 44]]
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 45]]
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 46]]
+  [1m[35m (7.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 47]]
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 48]]
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 49]]
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 36]]
+  [1m[35m (10.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2018-03-20 12:14:37 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.5ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.3ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.9ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.5ms)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-20 12:14:41 +0530
+Started GET "/auth/google_oauth2/callback?state=e1489f9229b7f304bb435a1e94ae489aea108943ebdc686b&code=4/AAD9xPWvfao_dq30WjFkMEJa7NqZtss5rcCwJzj2Uk2HbbbdQhqEMvVXKnCxQEIdqN_JL1em5cFstyfQYcuqVF0" for 127.0.0.1 at 2018-03-20 12:14:41 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"e1489f9229b7f304bb435a1e94ae489aea108943ebdc686b", "code"=>"4/AAD9xPWvfao_dq30WjFkMEJa7NqZtss5rcCwJzj2Uk2HbbbdQhqEMvVXKnCxQEIdqN_JL1em5cFstyfQYcuqVF0", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/models/user.rb:34:in `getAccessToken'
+app/controllers/base_controller.rb:18:in `create'
+Started GET "/" for 127.0.0.1 at 2018-03-20 12:15:08 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.3ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.3ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.9ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.3ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-20 12:15:10 +0530
+Started GET "/auth/google_oauth2/callback?state=e52b8fa49bdd481ef67a815a8c434c097e92b3d1dab10b09&code=4/AABmWIrTA9EziqGhENFo9gj2bVnIPnsZ9YYjzt5RvGumXHpZjM7M1SzA7dS6cGp2ByOdpprD1jcNtufVxlRarH0" for 127.0.0.1 at 2018-03-20 12:15:12 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"e52b8fa49bdd481ef67a815a8c434c097e92b3d1dab10b09", "code"=>"4/AABmWIrTA9EziqGhENFo9gj2bVnIPnsZ9YYjzt5RvGumXHpZjM7M1SzA7dS6cGp2ByOdpprD1jcNtufVxlRarH0", "provider"=>"google_oauth2"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "token", "uid", "created_at", "updated_at", "refreshtoken") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Ashwini Mandal"], ["email", "ashwini.mandal@cuelogic.com"], ["token", "ya29.GluEBT0ZR5k3yYberIJ6XyYOry0WrSkCgCESUhxclqs0iWSS7PVND4weIxFet8C6lLrxpxDZOZI_UO15vwOb3Iiu1XHKH9AGFUyfB9s0Jays6FukN0VRzF-w3vKb"], ["uid", "115301852494553111492"], ["created_at", "2018-03-20 06:45:12.957615"], ["updated_at", "2018-03-20 06:45:12.957615"], ["refreshtoken", "1/F3x43cdDdveUsY5tXG5mVqNU1PwIuQbnp4JxhVR9b56zuHY_CO6dqZhdDtDFtZ_C"]]
+  [1m[35m (25.1ms)[0m  [1m[35mCOMMIT[0m
+  Rendering base/create.html.erb within layouts/base
+  Rendered base/create.html.erb within layouts/base (0.5ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.3ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.5ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.2ms)
+Completed 200 OK in 49ms (Views: 18.3ms | ActiveRecord: 25.8ms)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ashwini.mandal@cuelogic.com"], ["LIMIT", 11]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1[0m  [["email", "ashwini.mandal@cuelogic.com"]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["token", "ashb"], ["updated_at", "2018-03-20 06:46:16.046784"], ["id", 50]]
+  [1m[35m (23.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1[0m  [["email", "ashwini.mandal@cuelogic.com"]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["token", "pqr"], ["updated_at", "2018-03-20 06:47:13.153662"], ["id", 50]]
+  [1m[35m (27.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 50]]
+  [1m[35m (22.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2018-03-20 12:19:20 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.4ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.4ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.7ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.3ms)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-20 12:19:24 +0530
+Started GET "/auth/google_oauth2/callback?state=1e9428f74de5c48d3b5ecc6c0513aaac4a08963c6847981a&code=4%2FAADtvmWWhel3E7jl0H3TLBr2LvTCnnZV9Ei3qrB8D49UUTsCXjGmGR_5eTUC0KNFUbIFG8sH9cjm9GIbOysLgwY" for 127.0.0.1 at 2018-03-20 12:19:34 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"1e9428f74de5c48d3b5ecc6c0513aaac4a08963c6847981a", "code"=>"4/AADtvmWWhel3E7jl0H3TLBr2LvTCnnZV9Ei3qrB8D49UUTsCXjGmGR_5eTUC0KNFUbIFG8sH9cjm9GIbOysLgwY", "provider"=>"google_oauth2"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "token", "uid", "created_at", "updated_at", "refreshtoken") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Ashwini Mandal"], ["email", "ashwini.mandal@cuelogic.com"], ["token", "ya29.GluEBTcD7YXN9401LfxTHOcyvK-qcRh1zYo6ZKCkuXmdvkaA0bxb5I03D4ddYYNppGlLALgz6G-AfKlFoetoq-4Pp-fmBjWidHgNztW04_Uys3Sg-XOW1mc5H22X"], ["uid", "115301852494553111492"], ["created_at", "2018-03-20 06:49:35.795205"], ["updated_at", "2018-03-20 06:49:35.795205"], ["refreshtoken", "1/IXjyodkSZaKZ5sO8K004Zm9x5tLaji0MGNkK0O95fXE"]]
+  [1m[35m (26.9ms)[0m  [1m[35mCOMMIT[0m
+  Rendering base/create.html.erb within layouts/base
+  Rendered base/create.html.erb within layouts/base (0.3ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.5ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.6ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.2ms)
+Completed 200 OK in 58ms (Views: 10.3ms | ActiveRecord: 31.0ms)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2018-03-20 12:23:03 +0530
+  
+SyntaxError (/home/ashwini/Workspace/ProviderDemo/app/controllers/base_controller.rb:54: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/base_controller.rb:54: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/" for 127.0.0.1 at 2018-03-20 12:23:12 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.5ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.3ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.6ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.3ms)
+Completed 200 OK in 27ms (Views: 16.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-20 12:23:13 +0530
+Started GET "/auth/google_oauth2/callback?state=5e63adddd84eb4c8ca25aa5ea1565769809962110c666988&code=4%2FAABVz4tP97SNTkOm4pijJSxOFYPVCtZkcOXM4LMWBrVpMT0CamcJKrpdEO_TKVSkka48UTSC_fl3vijGvLkN2PU" for 127.0.0.1 at 2018-03-20 12:23:20 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"5e63adddd84eb4c8ca25aa5ea1565769809962110c666988", "code"=>"4/AABVz4tP97SNTkOm4pijJSxOFYPVCtZkcOXM4LMWBrVpMT0CamcJKrpdEO_TKVSkka48UTSC_fl3vijGvLkN2PU", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1[0m  [["email", "ashwini.mandal@cuelogic.com"]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "users" SET "token" = $1, "expiresat" = $2, "accesstoken" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["token", "ya29.GluEBc7FH6O7Ga46T6C0lAbGY_cFNsDifIe7eZD1J5O9NHekBOZdqY2bKZyWUnF0aT77ogJJCW3tv_cgyemTpYjbfW683mFoe7xoZWWczVp7x01Y9rqqS4RN62lv"], ["expiresat", "2018-03-20"], ["accesstoken", "ya29.GluEBTjMwdip_Szmr5_-aHYIZBFk0pkjwTJ46hVBveYWirjo390hPGg4g3SzVMfUvmt_7EREYTWfgA-omUIER7RyRsLSUTxKhqBKvUWBiCPwMqD6932aT0Pq4zAv"], ["updated_at", "2018-03-20 06:53:21.353901"], ["id", 51]]
+  [1m[35m (25.2ms)[0m  [1m[35mCOMMIT[0m
+  Rendering base/create.html.erb within layouts/base
+  Rendered base/create.html.erb within layouts/base (0.5ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.4ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.6ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.3ms)
+Completed 200 OK in 409ms (Views: 17.1ms | ActiveRecord: 29.8ms)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6995684588039819805)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemoveExpiresatFromUsers (20180320071735)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (52.2ms)[0m  [1m[35mALTER TABLE "users" DROP "expiresat"[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180320071735"]]
+  [1m[35m (22.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6995684588039819805)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 51]]
+  [1m[35m (17.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2018-03-20 12:49:36 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.5) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.5) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.5) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+rack (2.0.4) lib/rack/handler/webrick.rb:86:in `service'
+/home/ashwini/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/home/ashwini/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/home/ashwini/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6995684588039819805)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddExpiresatFromUsers (20180320071805)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "expiresat" character varying[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180320071805"]]
+  [1m[35m (33.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6995684588039819805)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2018-03-20 12:49:56 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.3ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.4ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.8ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.3ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-20 12:49:58 +0530
+Started GET "/auth/google_oauth2/callback?state=e147bae8a2eb5515eb1a7314374869d965c81a580da89b48&code=4%2FAAB_JOqy-4K8O5cgTEfsXhuWqCuUcieEKDPRuyzn7K0BvVotcU0rH0QZ948H5jtsMg0pRL-hr3YxfII3pWKDAQc" for 127.0.0.1 at 2018-03-20 12:50:04 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"e147bae8a2eb5515eb1a7314374869d965c81a580da89b48", "code"=>"4/AAB_JOqy-4K8O5cgTEfsXhuWqCuUcieEKDPRuyzn7K0BvVotcU0rH0QZ948H5jtsMg0pRL-hr3YxfII3pWKDAQc", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 3.7ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/models/user.rb:34:in `getAccessToken'
+app/controllers/base_controller.rb:10:in `create'
+Started GET "/auth/google_oauth2/callback?state=e147bae8a2eb5515eb1a7314374869d965c81a580da89b48&code=4%2FAAB_JOqy-4K8O5cgTEfsXhuWqCuUcieEKDPRuyzn7K0BvVotcU0rH0QZ948H5jtsMg0pRL-hr3YxfII3pWKDAQc" for 127.0.0.1 at 2018-03-20 12:50:36 +0530
+Started GET "/auth/failure?message=invalid_credentials&origin=http%3A%2F%2Flocalhost%3A3000%2F&strategy=google_oauth2" for 127.0.0.1 at 2018-03-20 12:50:37 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/auth/failure"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+rack (2.0.4) lib/rack/handler/webrick.rb:86:in `service'
+/home/ashwini/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/home/ashwini/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/home/ashwini/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+Started GET "/auth/google_oauth2/callback?state=e147bae8a2eb5515eb1a7314374869d965c81a580da89b48&code=4/AADLHBeyT5Iblj0IiNNZIVYQLQ5VKrKB-fZOIxaP9iHQVrXmal4st4zNc63ZCI1yvYLQxFphh5tYLGz-y16twDg" for 127.0.0.1 at 2018-03-20 12:50:41 +0530
+Started GET "/auth/failure?message=csrf_detected&strategy=google_oauth2" for 127.0.0.1 at 2018-03-20 12:50:41 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/auth/failure"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+rack (2.0.4) lib/rack/handler/webrick.rb:86:in `service'
+/home/ashwini/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/home/ashwini/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/home/ashwini/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+Started GET "/" for 127.0.0.1 at 2018-03-20 12:50:44 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.4ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.3ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.6ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.3ms)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-20 12:50:46 +0530
+Started GET "/auth/google_oauth2/callback?state=5ca55bc72cd5cfb5636930b8c9194a1c214c94aa1b13a089&code=4/AABRrLh839cAQZsbHXrAo_Yzr9qjoj21rYMJKMfW4_ap0kK6jog02TlsY747pgkIunV0_sYVyIRQ9ExeLz2vUs0" for 127.0.0.1 at 2018-03-20 12:50:47 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"5ca55bc72cd5cfb5636930b8c9194a1c214c94aa1b13a089", "code"=>"4/AABRrLh839cAQZsbHXrAo_Yzr9qjoj21rYMJKMfW4_ap0kK6jog02TlsY747pgkIunV0_sYVyIRQ9ExeLz2vUs0", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.8ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/models/user.rb:34:in `getAccessToken'
+app/controllers/base_controller.rb:14:in `create'
+Started GET "/" for 127.0.0.1 at 2018-03-20 12:51:32 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.4ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.4ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.9ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.4ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-20 12:51:35 +0530
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/auth/google_oauth2/callback?state=9c2a1f079417148bd989414a49158ee724020b92e8109b71&code=4%2FAABfA26QQnXpsxM7Y5c4lkD_gXb791NRiBqpNWPg0x-XHnzzD_OKhkiZMr44yf56IbH1mt2d5Q4hpvm8B2ecpqo" for 127.0.0.1 at 2018-03-20 12:52:11 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"9c2a1f079417148bd989414a49158ee724020b92e8109b71", "code"=>"4/AABfA26QQnXpsxM7Y5c4lkD_gXb791NRiBqpNWPg0x-XHnzzD_OKhkiZMr44yf56IbH1mt2d5Q4hpvm8B2ecpqo", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/models/user.rb:34:in `getAccessToken'
+app/controllers/base_controller.rb:10:in `create'
+Started GET "/auth/google_oauth2/callback?state=9c2a1f079417148bd989414a49158ee724020b92e8109b71&code=4%2FAABfA26QQnXpsxM7Y5c4lkD_gXb791NRiBqpNWPg0x-XHnzzD_OKhkiZMr44yf56IbH1mt2d5Q4hpvm8B2ecpqo" for 127.0.0.1 at 2018-03-20 12:53:12 +0530
+Started GET "/auth/failure?message=invalid_credentials&origin=http%3A%2F%2Flocalhost%3A3000%2F&strategy=google_oauth2" for 127.0.0.1 at 2018-03-20 12:53:12 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/auth/failure"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+rack (2.0.4) lib/rack/handler/webrick.rb:86:in `service'
+/home/ashwini/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/home/ashwini/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/home/ashwini/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+Started GET "/" for 127.0.0.1 at 2018-03-20 12:53:16 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.5ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.4ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.7ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.4ms)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-20 12:53:19 +0530
+Started GET "/auth/google_oauth2/callback?state=bf33fe6244b40af776b1328b8ccc69c3677e520438cc2fe8&code=4/AAA7UOhbomqx3PjBx8u6hdLnFHHGeeiLyrQ0G9PW2PuwkpPRAn7XO4P6AxDp39tSKRCSzb26mbY_3AkeeOTxAMM" for 127.0.0.1 at 2018-03-20 12:53:20 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"bf33fe6244b40af776b1328b8ccc69c3677e520438cc2fe8", "code"=>"4/AAA7UOhbomqx3PjBx8u6hdLnFHHGeeiLyrQ0G9PW2PuwkpPRAn7XO4P6AxDp39tSKRCSzb26mbY_3AkeeOTxAMM", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 2.6ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/models/user.rb:34:in `getAccessToken'
+app/controllers/base_controller.rb:14:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2018-03-20 12:54:38 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.3ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.5ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.5ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.3ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-20 12:54:39 +0530
+Started GET "/auth/google_oauth2/callback?state=97add851e684da95017dab92809146d9b8d102793ecd0652&code=4/AAAtnTOubl9d3CtxqKLaeKCX-p9sNfKhzRocNRxxVdS5bBYrF2zKcoxXMYBNSm8zU-eOqo9ExPoVEs11dncsdiI" for 127.0.0.1 at 2018-03-20 12:54:41 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"97add851e684da95017dab92809146d9b8d102793ecd0652", "code"=>"4/AAAtnTOubl9d3CtxqKLaeKCX-p9sNfKhzRocNRxxVdS5bBYrF2zKcoxXMYBNSm8zU-eOqo9ExPoVEs11dncsdiI", "provider"=>"google_oauth2"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "token", "uid", "created_at", "updated_at", "refreshtoken") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Ashwini Mandal"], ["email", "ashwini.mandal@cuelogic.com"], ["token", "ya29.GluEBSGhTEVh2QRdDJ2tQdxcRoOW5wh36aujzs7DUqPtJgDH82wE_fEAUTOJlHpJyDeHmAN-6NfoEDa1N6xu_14k6-2S58hl9NRka7Rh1p_UrB485T09NaNeIAKV"], ["uid", "115301852494553111492"], ["created_at", "2018-03-20 07:24:42.856620"], ["updated_at", "2018-03-20 07:24:42.856620"], ["refreshtoken", "1/mp7UwajEwWKP4YkPx0pm3wilhZGYLVhkV0CLWptbcWE"]]
+  [1m[35m (24.5ms)[0m  [1m[35mCOMMIT[0m
+  Rendering base/create.html.erb within layouts/base
+  Rendered base/create.html.erb within layouts/base (0.5ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.5ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.5ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.3ms)
+Completed 200 OK in 56ms (Views: 14.9ms | ActiveRecord: 27.5ms)
+
+
+Started GET "/auth/google_oauth2/auth/google_oauth2" for 127.0.0.1 at 2018-03-20 12:54:54 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/auth/google_oauth2/auth/google_oauth2"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+rack (2.0.4) lib/rack/handler/webrick.rb:86:in `service'
+/home/ashwini/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/home/ashwini/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/home/ashwini/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+Started GET "/" for 127.0.0.1 at 2018-03-20 12:55:22 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.4ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.4ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (1.0ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.4ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-20 12:55:25 +0530
+Started GET "/auth/google_oauth2/callback?state=691e07c45001b14ce6c4e98c6744471869db2b75a71b49b3&code=4/AACzQUogutesuBW1h6yUhPGlaJ12uus-B72YoEUq1OYGGphui0gX96ybYozfwtBjdVY6neaV165hheJXh-XZcdA" for 127.0.0.1 at 2018-03-20 12:55:25 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"691e07c45001b14ce6c4e98c6744471869db2b75a71b49b3", "code"=>"4/AACzQUogutesuBW1h6yUhPGlaJ12uus-B72YoEUq1OYGGphui0gX96ybYozfwtBjdVY6neaV165hheJXh-XZcdA", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1[0m  [["email", "ashwini.mandal@cuelogic.com"]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "token" = $1, "expiresat" = $2, "accesstoken" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["token", "ya29.GluEBRG4w6tu6h6g77rSoE8YVmg9Zcxewljstus0jw15ApUcPjcm6dg3gWx4Qm6E1CQ-aAbJ0yyXnMd6bBaywv8G1-xu4-RTpwVLbfgZA2Ei_l-g_ElU9FRmbcEp"], ["expiresat", "2018-03-20 08:25:26 UTC"], ["accesstoken", "ya29.GluEBeOABPqLHoBfY6WpXoS66lhjqkzP9S1lsTVhx2wagLBfxWcqrssgRersOjDujz1BsPs6h1FjpyXig86cisrfqwbCfmBlB65x35hqYWsyQDOFsesTwncvZcEt"], ["updated_at", "2018-03-20 07:25:26.603219"], ["id", 52]]
+  [1m[35m (23.0ms)[0m  [1m[35mCOMMIT[0m
+  Rendering base/create.html.erb within layouts/base
+  Rendered base/create.html.erb within layouts/base (0.4ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.4ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.6ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.2ms)
+Completed 200 OK in 378ms (Views: 16.8ms | ActiveRecord: 24.9ms)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2018-03-20 13:30:42 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.6ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.3ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.5ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.3ms)
+Completed 200 OK in 155ms (Views: 148.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-20 13:30:46 +0530
+Started GET "/auth/google_oauth2/callback?state=210488229f1af605f60d43342fd6a9ca77745edfde08a1ba&code=4/AACNUdCPN4UvWU_a-P8JTS2iAezT_OnN8YB-5k9-cDC3UnGYMG6MjzLcbSJjDO5Gbw3M6i5A0fn6lZPZTHv8_eE" for 127.0.0.1 at 2018-03-20 13:30:46 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"210488229f1af605f60d43342fd6a9ca77745edfde08a1ba", "code"=>"4/AACNUdCPN4UvWU_a-P8JTS2iAezT_OnN8YB-5k9-cDC3UnGYMG6MjzLcbSJjDO5Gbw3M6i5A0fn6lZPZTHv8_eE", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1[0m  [["email", "ashwini.mandal@cuelogic.com"]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "token" = $1, "expiresat" = $2, "accesstoken" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["token", "ya29.GluEBfDdxnZT37KKn2U4LypT-JmZQVlwiUgURA9zdf_VSOHojidjpsIrwlgj2Jh6WHfxVB1XKoI1CPUYU7KpTNYzO9PliiHGzVJ4PR7u3Cxri4kfrp1GCnuEH1cZ"], ["expiresat", "2018-03-20 09:00:48 UTC"], ["accesstoken", "ya29.GluEBTFbLInDfxbgMsADngVumPvzN6kpHQ5RAD7ybRShN_Wf-wCFr0YHqVAMMfkFQBDb9R0xXLWixbBn6-PQemN3TDFGLEuAXtZlTyxmcjYL2WRLSyJAY0a3cjUU"], ["updated_at", "2018-03-20 08:00:48.186720"], ["id", 52]]
+  [1m[35m (27.6ms)[0m  [1m[35mCOMMIT[0m
+  Rendering base/create.html.erb within layouts/base
+  Rendered base/create.html.erb within layouts/base (0.7ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.3ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.6ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.3ms)
+Completed 200 OK in 392ms (Views: 18.3ms | ActiveRecord: 32.0ms)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/base/displaySentMail" for 127.0.0.1 at 2018-03-20 13:34:29 +0530
+Processing by BaseController#displaySentMail as HTML
+Completed 500 Internal Server Error in 86201ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of Mail::Message into String):
+  
+app/models/user.rb:22:in `sentMails'
+app/controllers/base_controller.rb:42:in `displaySentMail'
+Started GET "/auth/google_oauth2/callback?state=210488229f1af605f60d43342fd6a9ca77745edfde08a1ba&code=4/AACNUdCPN4UvWU_a-P8JTS2iAezT_OnN8YB-5k9-cDC3UnGYMG6MjzLcbSJjDO5Gbw3M6i5A0fn6lZPZTHv8_eE" for 127.0.0.1 at 2018-03-20 13:36:49 +0530
+Started GET "/auth/failure?message=csrf_detected&strategy=google_oauth2" for 127.0.0.1 at 2018-03-20 13:36:49 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/auth/failure"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+rack (2.0.4) lib/rack/handler/webrick.rb:86:in `service'
+/home/ashwini/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/home/ashwini/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/home/ashwini/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+Started GET "/base/displaySentMail" for 127.0.0.1 at 2018-03-20 13:36:53 +0530
+Processing by BaseController#displaySentMail as HTML
+  Rendering base/displaySentMail.html.erb within layouts/base
+  Rendered base/displaySentMail.html.erb within layouts/base (0.3ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.4ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.9ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.5ms)
+Completed 200 OK in 7709ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/base/displaySentMail" for 127.0.0.1 at 2018-03-20 13:37:20 +0530
+Processing by BaseController#displaySentMail as HTML
+  Rendering base/displaySentMail.html.erb within layouts/base
+  Rendered base/displaySentMail.html.erb within layouts/base (0.3ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.4ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.8ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.3ms)
+Completed 200 OK in 5717ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/base/displaySentMail" for 127.0.0.1 at 2018-03-20 13:37:43 +0530
+Processing by BaseController#displaySentMail as HTML
+  Rendering base/displaySentMail.html.erb within layouts/base
+  Rendered base/displaySentMail.html.erb within layouts/base (0.5ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.3ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.5ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.3ms)
+Completed 200 OK in 5071ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/base/displaySentMail" for 127.0.0.1 at 2018-03-20 13:40:50 +0530
+Processing by BaseController#displaySentMail as HTML
+  Rendering base/displaySentMail.html.erb within layouts/base
+  Rendered base/displaySentMail.html.erb within layouts/base (0.3ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.6ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.8ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.3ms)
+Completed 200 OK in 5641ms (Views: 14.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/base/displaySentMail" for 127.0.0.1 at 2018-03-20 13:41:18 +0530
+Processing by BaseController#displaySentMail as HTML
+  Rendering base/displaySentMail.html.erb within layouts/base
+  Rendered base/displaySentMail.html.erb within layouts/base (0.5ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.3ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.5ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.2ms)
+Completed 200 OK in 5185ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/base/displaySentMail" for 127.0.0.1 at 2018-03-20 13:41:34 +0530
+Processing by BaseController#displaySentMail as HTML
+  Rendering base/displaySentMail.html.erb within layouts/base
+  Rendered base/displaySentMail.html.erb within layouts/base (0.5ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.3ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.7ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.3ms)
+Completed 200 OK in 4709ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/base/displaySentMail" for 127.0.0.1 at 2018-03-20 13:41:58 +0530
+Processing by BaseController#displaySentMail as HTML
+  Rendering base/displaySentMail.html.erb within layouts/base
+  Rendered base/displaySentMail.html.erb within layouts/base (0.7ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.4ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.7ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.3ms)
+Completed 200 OK in 3292ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/base/displaySentMail" for 127.0.0.1 at 2018-03-20 13:42:16 +0530
+Processing by BaseController#displaySentMail as HTML
+  Rendering base/displaySentMail.html.erb within layouts/base
+  Rendered base/displaySentMail.html.erb within layouts/base (0.5ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.4ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.8ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.3ms)
+Completed 200 OK in 5002ms (Views: 17.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/base/displaySentMail" for 127.0.0.1 at 2018-03-20 13:42:38 +0530
+Processing by BaseController#displaySentMail as HTML
+  Rendering base/displaySentMail.html.erb within layouts/base
+  Rendered base/displaySentMail.html.erb within layouts/base (0.3ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.4ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.7ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.3ms)
+Completed 200 OK in 5272ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/base/displaySentMail" for 127.0.0.1 at 2018-03-20 13:43:04 +0530
+Processing by BaseController#displaySentMail as HTML
+  Rendering base/displaySentMail.html.erb within layouts/base
+  Rendered base/displaySentMail.html.erb within layouts/base (0.3ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.5ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.6ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.3ms)
+Completed 200 OK in 5174ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/base/displaySentMail" for 127.0.0.1 at 2018-03-20 13:43:28 +0530
+Processing by BaseController#displaySentMail as HTML
+Completed 500 Internal Server Error in 4970ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (Can not call read on a part unless it is an attachment.):
+  
+app/models/user.rb:20:in `sentMails'
+app/controllers/base_controller.rb:42:in `displaySentMail'
+Started GET "/base/displaySentMail" for 127.0.0.1 at 2018-03-20 13:43:43 +0530
+Processing by BaseController#displaySentMail as HTML
+  Rendering base/displaySentMail.html.erb within layouts/base
+  Rendered base/displaySentMail.html.erb within layouts/base (0.4ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.3ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.7ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.3ms)
+Completed 200 OK in 6218ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2018-03-20 15:10:35 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.6ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.3ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.5ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.2ms)
+Completed 200 OK in 161ms (Views: 155.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-20 15:10:37 +0530
+Started GET "/auth/google_oauth2/callback?state=e63034437e65f451ff726ffaa958fd2a22d0908746a3c425&code=4%2FAADf1RHPeQjgGztJBPK_G-F7k2Z0cfCw04-reAHNFZu84nsKUr72FHMW0lNP_hCxvI2cL5kBCD85x0s-eSWRrxk" for 127.0.0.1 at 2018-03-20 15:10:44 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"e63034437e65f451ff726ffaa958fd2a22d0908746a3c425", "code"=>"4/AADf1RHPeQjgGztJBPK_G-F7k2Z0cfCw04-reAHNFZu84nsKUr72FHMW0lNP_hCxvI2cL5kBCD85x0s-eSWRrxk", "provider"=>"google_oauth2"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "token", "uid", "created_at", "updated_at", "refreshtoken") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Ashwini Mandal"], ["email", "ashwini.mandal@cuelogic.com"], ["token", "ya29.GluEBUyUSmVeHsJtnDuAO3gPGctL2bc9Fn_YYqE8lSqCGETPquusZ8H_kWRxx9bV8exXiKLjWlRkR0Mfrzl00KTLENEsY5X3M0-cZKCIYxA8s25GjZ3zBuFnI-BH"], ["uid", "115301852494553111492"], ["created_at", "2018-03-20 09:40:45.872549"], ["updated_at", "2018-03-20 09:40:45.872549"], ["refreshtoken", "1/q0-Tw4N1BDhdO11T1o-NPIwvecyYO_wMlZCbUTrcYmbKHZ3yXTSTp_Yic8tRAg9L"]]
+  [1m[35m (24.5ms)[0m  [1m[35mCOMMIT[0m
+  Rendering base/create.html.erb within layouts/base
+  Rendered base/create.html.erb within layouts/base (0.5ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.6ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.6ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.3ms)
+Completed 200 OK in 58ms (Views: 17.4ms | ActiveRecord: 27.9ms)
+
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2018-03-20 15:11:25 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.3ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.5ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.9ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.4ms)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-20 15:11:27 +0530
+Started GET "/auth/google_oauth2/callback?state=8ba47b46708662610a82b416dd4b85090c0f460757d7b7d4&code=4/AAAuC15PIFa_0GarpabfsfTn7Dj32VvphewUgfKKEcHP_Fu38uTt9LzzU7lM_MqKEo-DzhPTO2Ew7tY2sFY_zP4" for 127.0.0.1 at 2018-03-20 15:11:28 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"8ba47b46708662610a82b416dd4b85090c0f460757d7b7d4", "code"=>"4/AAAuC15PIFa_0GarpabfsfTn7Dj32VvphewUgfKKEcHP_Fu38uTt9LzzU7lM_MqKEo-DzhPTO2Ew7tY2sFY_zP4", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1[0m  [["email", "ashwini.mandal@cuelogic.com"]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "token" = $1, "expiresat" = $2, "accesstoken" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["token", "ya29.GluEBT_EgambI99DfSkrQ-dT-ct9cUqlwbFdvPi36_0RVrs6aX5MTzbE6VW5z5DcepfefqvdpuNzL1e3r8i3dO_YfsCw0cXVc0naiqZ-gX3WyRbY3WlpPFdKu2Fy"], ["expiresat", "2018-03-20 10:41:29 UTC"], ["accesstoken", "ya29.GluEBZb6Rd5USqYgiBQcSzp17B3Zv6CWpgAzzW7jHIDwW_m7eKKBH66JL93F5pEMQc_JPlHaxprmUxRq4hVIx7MLqlYV1ssvlw9xqr8RSbfMmiEONhSTdmWjaXXn"], ["updated_at", "2018-03-20 09:41:29.590671"], ["id", 52]]
+  [1m[35m (27.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "token" = $1, "expiresat" = $2, "accesstoken" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["token", "ya29.GluEBT_EgambI99DfSkrQ-dT-ct9cUqlwbFdvPi36_0RVrs6aX5MTzbE6VW5z5DcepfefqvdpuNzL1e3r8i3dO_YfsCw0cXVc0naiqZ-gX3WyRbY3WlpPFdKu2Fy"], ["expiresat", "2018-03-20 10:41:29 UTC"], ["accesstoken", "ya29.GluEBZb6Rd5USqYgiBQcSzp17B3Zv6CWpgAzzW7jHIDwW_m7eKKBH66JL93F5pEMQc_JPlHaxprmUxRq4hVIx7MLqlYV1ssvlw9xqr8RSbfMmiEONhSTdmWjaXXn"], ["updated_at", "2018-03-20 09:41:29.621269"], ["id", 53]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  Rendering base/create.html.erb within layouts/base
+  Rendered base/create.html.erb within layouts/base (0.6ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.3ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.5ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.3ms)
+Completed 200 OK in 425ms (Views: 14.8ms | ActiveRecord: 32.9ms)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35mSQL (21.9ms)[0m  [1m[31mDELETE FROM "users"[0m
+Started GET "/base/logout" for 127.0.0.1 at 2018-03-20 15:19:44 +0530
+Processing by BaseController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-20 15:19:44 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.3ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.3ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.5ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.3ms)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/base/logout" for 127.0.0.1 at 2018-03-20 15:19:45 +0530
+Processing by BaseController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-20 15:19:45 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.3ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.4ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.5ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.2ms)
+Completed 200 OK in 32ms (Views: 31.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-20 15:20:02 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.5ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.3ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.5ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.3ms)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-20 15:20:05 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.4ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.5ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.8ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.3ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-20 15:20:16 +0530
+Started GET "/auth/google_oauth2/callback?state=50284df1374e189dc7fd7182be18f891c38bf2ba363027ac&code=4%2FAAD9HnmWxG4Xc9MnWjCqt4uglORMkxU6WTbL1Uw5uyyvVLTvz8thwdIOeGMaKlPp6wD230C8v_puFpV6dJjj4cc" for 127.0.0.1 at 2018-03-20 15:20:26 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"50284df1374e189dc7fd7182be18f891c38bf2ba363027ac", "code"=>"4/AAD9HnmWxG4Xc9MnWjCqt4uglORMkxU6WTbL1Uw5uyyvVLTvz8thwdIOeGMaKlPp6wD230C8v_puFpV6dJjj4cc", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 2.8ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/models/user.rb:32:in `getAccessToken'
+app/controllers/base_controller.rb:14:in `create'
+Started GET "/" for 127.0.0.1 at 2018-03-20 16:07:07 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.8ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.4ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.8ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.3ms)
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-20 16:09:41 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.3ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.3ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.8ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.2ms)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-20 16:09:44 +0530
+Started GET "/auth/google_oauth2/callback?state=c087bb8c3930b91a66575b5f416cf55b6be2a4fc93f2808c&code=4%2FAACZpX0HW0g9FZc6subo-hA3Bv_kvyGjdmpzNyMTvlIHwpe6bcmR6uHgdXZhAfoXbdd94tAqIIUZf6ldlS6n_2U" for 127.0.0.1 at 2018-03-20 16:09:50 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"c087bb8c3930b91a66575b5f416cf55b6be2a4fc93f2808c", "code"=>"4/AACZpX0HW0g9FZc6subo-hA3Bv_kvyGjdmpzNyMTvlIHwpe6bcmR6uHgdXZhAfoXbdd94tAqIIUZf6ldlS6n_2U", "provider"=>"google_oauth2"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "token", "uid", "created_at", "updated_at", "refreshtoken") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Ashwini Mandal"], ["email", "ashwini.mandal@cuelogic.com"], ["token", "ya29.GluEBaogXe5wkEIXHxF_ITw__IFXG-PAZjeJdsdrR74wDdN8XXAfXmLwZL7SmYuYfH_F2UefjqivVjJoSjAzPq2GOtUYUHnSLjNB-owwsZ9QtPP7B4ZWyawlrXpj"], ["uid", "115301852494553111492"], ["created_at", "2018-03-20 10:39:51.752225"], ["updated_at", "2018-03-20 10:39:51.752225"], ["refreshtoken", "1/n9_L-BYqv6NVCrNkTH4i3mIZktC_3Z3wmYIHc5uIhDw"]]
+  [1m[35m (25.4ms)[0m  [1m[35mCOMMIT[0m
+  Rendering base/create.html.erb within layouts/base
+  Rendered base/create.html.erb within layouts/base (0.9ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.3ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.6ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.3ms)
+Completed 200 OK in 77ms (Views: 21.4ms | ActiveRecord: 29.8ms)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2018-03-20 17:07:24 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.6ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.3ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.5ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.2ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-20 17:07:27 +0530
+Started GET "/auth/google_oauth2/callback?state=70c47033fb369bf213b06d7a2fe745443e9b81e2a3e2264e&code=4%2FAAAiUdhR77cayPdUB9BMdD7dOWfudi_FjRlaxFvby3KaHAPg1lBxTjIm9Bcnox7uPIp9Mqe3-wtMHt_x5-ZnGhY" for 127.0.0.1 at 2018-03-20 17:07:33 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"70c47033fb369bf213b06d7a2fe745443e9b81e2a3e2264e", "code"=>"4/AAAiUdhR77cayPdUB9BMdD7dOWfudi_FjRlaxFvby3KaHAPg1lBxTjIm9Bcnox7uPIp9Mqe3-wtMHt_x5-ZnGhY", "provider"=>"google_oauth2"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "token", "uid", "created_at", "updated_at", "refreshtoken", "expiresat") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Ashwini Mandal"], ["email", "ashwini.mandal@cuelogic.com"], ["token", "ya29.GluEBRKPIJL2wolQ1RwCCE-wb4RudGojklu36Iw1Bks5FHtB5YxGtK6fK2J8E_L0XR4GvxISOBc7umldhwtqQniJIIFcLJYXT7fM46VrKRvqZ2EV7AOF790ET32j"], ["uid", "115301852494553111492"], ["created_at", "2018-03-20 11:37:35.036230"], ["updated_at", "2018-03-20 11:37:35.036230"], ["refreshtoken", "1/iSY0H7RxCyO3yHeV2D4evb6-ZzNW1dRC41TGfxXhQaw"], ["expiresat", "1521549454"]]
+  [1m[35m (23.0ms)[0m  [1m[35mCOMMIT[0m
+  Rendering base/create.html.erb within layouts/base
+  Rendered base/create.html.erb within layouts/base (0.5ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.3ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.5ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.2ms)
+Completed 200 OK in 60ms (Views: 16.8ms | ActiveRecord: 26.4ms)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2018-03-20 18:14:06 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.3ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.5ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.5ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.2ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-20 18:14:09 +0530
+Started GET "/auth/google_oauth2/callback?state=3347801ba73f767b16ec6e56665520865b9a9f4e1ae59fe3&code=4%2FAACLUcL6ib7T_L7-8upRTvkaxVwOrW_XxFAhHgwMjcSP6u3i2T5pBbF1mtCJwh3_LLMzPlVTkcQSVk-YoJN7knc" for 127.0.0.1 at 2018-03-20 18:14:15 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"3347801ba73f767b16ec6e56665520865b9a9f4e1ae59fe3", "code"=>"4/AACLUcL6ib7T_L7-8upRTvkaxVwOrW_XxFAhHgwMjcSP6u3i2T5pBbF1mtCJwh3_LLMzPlVTkcQSVk-YoJN7knc", "provider"=>"google_oauth2"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "token", "uid", "created_at", "updated_at", "refreshtoken", "expiresat") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Ashwini Mandal"], ["email", "ashwini.mandal@cuelogic.com"], ["token", "ya29.GluEBa7uMRM1_urseuxC9_jwsq7hp7vgh_lOLXv2iSFkNG4WTjouIyQUN7rRecwwuzWiUibmwiH8I0evrfNPcC9OfjK6-qKCAPDzv8h62Y_5siVr1RpOO-7AgO9m"], ["uid", "115301852494553111492"], ["created_at", "2018-03-20 12:44:16.986764"], ["updated_at", "2018-03-20 12:44:16.986764"], ["refreshtoken", "1/MSau2cLusJhvHBari3NLYTnfslBq5twd9tWqhkVcMu0"], ["expiresat", "2018-03-20 19:14:16 +0530"]]
+  [1m[35m (26.3ms)[0m  [1m[35mCOMMIT[0m
+  Rendering base/create.html.erb within layouts/base
+  Rendered base/create.html.erb within layouts/base (0.6ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.6ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.8ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.4ms)
+Completed 200 OK in 68ms (Views: 21.4ms | ActiveRecord: 29.9ms)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 54]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 11]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 54]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "expiresat" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["expiresat", "ya29.GluEBaD58DKBhUIk5VTLKYZTHGI_ml7cYoykCkXTeBxhZyoR0Gapr9MNw-6qV_D3WqerlNEDF5u7eOXxiuDklJaqYSBGd88f4WrbbV-xo05vDg4l21tPM5nF65Jc"], ["updated_at", "2018-03-20 13:05:30.741955"], ["id", 54]]
+  [1m[35m (27.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "token" = $1, "expiresat" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["token", "ya29.GluEBVeU4-gX5K8uPduj79oN3fKXBiC-Agjf5q6LmDJ69l1HWnGliIbcc_cLKUk0asrriCiloRjsfl7qUOxE7P5hvaD0Re46j0IKO8biR6KZnGyfS2RfQHJAO5Fd"], ["expiresat", "3600"], ["updated_at", "2018-03-20 13:09:30.031847"], ["id", 54]]
+  [1m[35m (41.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2018-03-20 18:51:45 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/ashwini/Workspace/ProviderDemo/app/controllers/base_controller.rb:42: syntax error, unexpected ')', expecting =>
+en:responseData,Time.now_to_s)
+                              ^):
+  
+app/controllers/base_controller.rb:42: syntax error, unexpected ')', expecting =>
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2018-03-20 18:54:08 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.4ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.3ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.7ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.2ms)
+Completed 200 OK in 237ms (Views: 236.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-20 18:54:49 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.4ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.4ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.8ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.4ms)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-20 18:55:05 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.3ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.4ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.6ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.3ms)
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-20 18:55:07 +0530
+Started GET "/auth/google_oauth2/callback?state=81f1d4d0bed4dd14bdaa7087c1eabfb19af41e9a663f8772&code=4%2FAABZrmxPuJ1trX1Z1cFcI1mUIc4bZK3F21AU5xnSf-xlmbQp260x0HfVwWvgOwuNPu3xyPGpMJrOW0r7813ikgU" for 127.0.0.1 at 2018-03-20 18:55:14 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"81f1d4d0bed4dd14bdaa7087c1eabfb19af41e9a663f8772", "code"=>"4/AABZrmxPuJ1trX1Z1cFcI1mUIc4bZK3F21AU5xnSf-xlmbQp260x0HfVwWvgOwuNPu3xyPGpMJrOW0r7813ikgU", "provider"=>"google_oauth2"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "token", "uid", "created_at", "updated_at", "refreshtoken", "expiresat") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Ashwini Mandal"], ["email", "ashwini.mandal@cuelogic.com"], ["token", "ya29.GluEBeOZhOFdhoO1wmHQZVQsN2da2ZjCAbtaQCIO1_Mfy_mkTz2XMu4uvomDFA-ZIGSvcjHeylFOV31ruaD3rZoUj34GzAFLPIn2Zdxn2nzQtH9XQZFmr1M22285"], ["uid", "115301852494553111492"], ["created_at", "2018-03-20 13:25:15.053294"], ["updated_at", "2018-03-20 13:25:15.053294"], ["refreshtoken", "1/IxmpF35z638dmTTCBEHzMtc7dLrXWuMl9UEJ4z5buFc"], ["expiresat", "2018-03-20 19:55:14 +0530"]]
+  [1m[35m (60.8ms)[0m  [1m[35mCOMMIT[0m
+  Rendering base/create.html.erb within layouts/base
+  Rendered base/create.html.erb within layouts/base (0.7ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.3ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.4ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.3ms)
+Completed 200 OK in 96ms (Views: 15.9ms | ActiveRecord: 65.7ms)
+
+
+Started GET "/base/displaySentMail" for 127.0.0.1 at 2018-03-20 18:56:14 +0530
+Processing by BaseController#displaySentMail as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering base/displaySentMail.html.erb within layouts/base
+  Rendered base/displaySentMail.html.erb within layouts/base (0.4ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.3ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.4ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.2ms)
+Completed 200 OK in 17ms (Views: 11.7ms | ActiveRecord: 0.9ms)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/auth/google_oauth2/auth/google_oauth2" for 127.0.0.1 at 2018-03-20 18:59:36 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/auth/google_oauth2/auth/google_oauth2"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+rack (2.0.4) lib/rack/handler/webrick.rb:86:in `service'
+/home/ashwini/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/home/ashwini/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/home/ashwini/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+Started GET "/" for 127.0.0.1 at 2018-03-20 18:59:43 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.4ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.5ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.5ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.4ms)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-20 18:59:46 +0530
+Started GET "/auth/google_oauth2/callback?state=a85d35f809cff8c10ecebbddd0cdf0574a50df5e7a483ecb&code=4/AADb5DB9_pbm8kX3INQbt2wfR7PYvj2z9H0QeA1KjoEiE9q_684gZV21wandRZQhNVrlVLmef2VpgVJkywpf6a8" for 127.0.0.1 at 2018-03-20 18:59:47 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"a85d35f809cff8c10ecebbddd0cdf0574a50df5e7a483ecb", "code"=>"4/AADb5DB9_pbm8kX3INQbt2wfR7PYvj2z9H0QeA1KjoEiE9q_684gZV21wandRZQhNVrlVLmef2VpgVJkywpf6a8", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1[0m  [["email", "ashwini.mandal@cuelogic.com"]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "token" = $1, "expiresat" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["token", "ya29.GluEBeCb6x7Vsjfa44CMotTmAG4NCrl_z4nAqI_lTbzlpbc0y78YaRvD9SRwSLyYyr92qIos0nRYOgJNdMwssjMUntQOPJ8guE_RL5FePyVc9rJ-tIqpXCd9dmE3"], ["expiresat", nil], ["updated_at", "2018-03-20 13:29:48.075376"], ["id", 55]]
+  [1m[35m (22.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "token" = $1, "expiresat" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["token", "ya29.GluEBeCb6x7Vsjfa44CMotTmAG4NCrl_z4nAqI_lTbzlpbc0y78YaRvD9SRwSLyYyr92qIos0nRYOgJNdMwssjMUntQOPJ8guE_RL5FePyVc9rJ-tIqpXCd9dmE3"], ["expiresat", nil], ["updated_at", "2018-03-20 13:29:48.101260"], ["id", 56]]
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "token" = $1, "expiresat" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["token", "ya29.GluEBeCb6x7Vsjfa44CMotTmAG4NCrl_z4nAqI_lTbzlpbc0y78YaRvD9SRwSLyYyr92qIos0nRYOgJNdMwssjMUntQOPJ8guE_RL5FePyVc9rJ-tIqpXCd9dmE3"], ["expiresat", nil], ["updated_at", "2018-03-20 13:29:48.110107"], ["id", 54]]
+  [1m[35m (4.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "token" = $1, "expiresat" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["token", "ya29.GluEBeCb6x7Vsjfa44CMotTmAG4NCrl_z4nAqI_lTbzlpbc0y78YaRvD9SRwSLyYyr92qIos0nRYOgJNdMwssjMUntQOPJ8guE_RL5FePyVc9rJ-tIqpXCd9dmE3"], ["expiresat", nil], ["updated_at", "2018-03-20 13:29:48.117762"], ["id", 57]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  Rendering base/create.html.erb within layouts/base
+  Rendered base/create.html.erb within layouts/base (0.4ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.3ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.6ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.2ms)
+Completed 200 OK in 80ms (Views: 10.5ms | ActiveRecord: 44.1ms)
+
+
+Started GET "/base/displaySentMail" for 127.0.0.1 at 2018-03-20 19:00:09 +0530
+Processing by BaseController#displaySentMail as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `to_time' for nil:NilClass):
+  
+app/models/user.rb:28:in `validateAccessToken'
+app/controllers/base_controller.rb:41:in `displaySentMail'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/base/displaySentMail" for 127.0.0.1 at 2018-03-20 19:01:28 +0530
+Processing by BaseController#displaySentMail as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 2.9ms)
+
+
+  
+NoMethodError (undefined method `to_time' for nil:NilClass):
+  
+app/models/user.rb:28:in `validateAccessToken'
+app/controllers/base_controller.rb:41:in `displaySentMail'
+Started GET "/base/displaySentMail" for 127.0.0.1 at 2018-03-20 19:01:31 +0530
+Processing by BaseController#displaySentMail as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `to_time' for nil:NilClass):
+  
+app/models/user.rb:28:in `validateAccessToken'
+app/controllers/base_controller.rb:41:in `displaySentMail'
+Started GET "/" for 127.0.0.1 at 2018-03-20 19:01:35 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.3ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.3ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.6ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.2ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-20 19:01:35 +0530
+Started GET "/auth/google_oauth2/callback?state=11a7f5dae5d5efb82c549da784f475d48fa2f80f7637c7f0&code=4/AAAjU-mfRd1mj2doEyJAMT89LYEndA4t9slXmR7OY2A9g6yivTg5J7jkMqOmIfqtEUZmuX97R4Todnf69-MS6fQ" for 127.0.0.1 at 2018-03-20 19:01:36 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"11a7f5dae5d5efb82c549da784f475d48fa2f80f7637c7f0", "code"=>"4/AAAjU-mfRd1mj2doEyJAMT89LYEndA4t9slXmR7OY2A9g6yivTg5J7jkMqOmIfqtEUZmuX97R4Todnf69-MS6fQ", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1[0m  [["email", "ashwini.mandal@cuelogic.com"]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "token" = $1, "expiresat" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["token", "ya29.GluEBaUkh6a4t1W1hTs9ZIR8wTg2Z1E3VHSbbaJ7JP5CwtuaeEBO2k8evs-yYVj2OTfxAI6GNgZGwsL_7QbFvznVtr6-p9_yMyl2GKw8yjV9p35UB-t6PvbYLG6E"], ["expiresat", "2018-03-20 20:01:36 +0530"], ["updated_at", "2018-03-20 13:31:37.396915"], ["id", 55]]
+  [1m[35m (24.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "token" = $1, "expiresat" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["token", "ya29.GluEBaUkh6a4t1W1hTs9ZIR8wTg2Z1E3VHSbbaJ7JP5CwtuaeEBO2k8evs-yYVj2OTfxAI6GNgZGwsL_7QbFvznVtr6-p9_yMyl2GKw8yjV9p35UB-t6PvbYLG6E"], ["expiresat", "2018-03-20 20:01:36 +0530"], ["updated_at", "2018-03-20 13:31:37.425318"], ["id", 56]]
+  [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "token" = $1, "expiresat" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["token", "ya29.GluEBaUkh6a4t1W1hTs9ZIR8wTg2Z1E3VHSbbaJ7JP5CwtuaeEBO2k8evs-yYVj2OTfxAI6GNgZGwsL_7QbFvznVtr6-p9_yMyl2GKw8yjV9p35UB-t6PvbYLG6E"], ["expiresat", "2018-03-20 20:01:36 +0530"], ["updated_at", "2018-03-20 13:31:37.433913"], ["id", 54]]
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "token" = $1, "expiresat" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["token", "ya29.GluEBaUkh6a4t1W1hTs9ZIR8wTg2Z1E3VHSbbaJ7JP5CwtuaeEBO2k8evs-yYVj2OTfxAI6GNgZGwsL_7QbFvznVtr6-p9_yMyl2GKw8yjV9p35UB-t6PvbYLG6E"], ["expiresat", "2018-03-20 20:01:36 +0530"], ["updated_at", "2018-03-20 13:31:37.441158"], ["id", 57]]
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  Rendering base/create.html.erb within layouts/base
+  Rendered base/create.html.erb within layouts/base (0.4ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.3ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.6ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.3ms)
+Completed 200 OK in 74ms (Views: 15.5ms | ActiveRecord: 43.7ms)
+
+
+Started GET "/base/displaySentMail" for 127.0.0.1 at 2018-03-20 19:01:43 +0530
+Processing by BaseController#displaySentMail as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering base/displaySentMail.html.erb within layouts/base
+  Rendered base/displaySentMail.html.erb within layouts/base (0.3ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.4ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.8ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.7ms)
+Completed 200 OK in 21ms (Views: 17.4ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/base/displaySentMail" for 127.0.0.1 at 2018-03-20 19:04:47 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BaseController#displaySentMail as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering base/displaySentMail.html.erb within layouts/base
+  Rendered base/displaySentMail.html.erb within layouts/base (1.3ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.6ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (1.5ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.2ms)
+Completed 200 OK in 251ms (Views: 229.5ms | ActiveRecord: 4.6ms)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 11]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2018-03-20 19:14:26 +0530
+Processing by BaseController#index as HTML
+  Rendering base/index.html.erb within layouts/base
+  Rendered base/index.html.erb within layouts/base (0.4ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.4ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.7ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.3ms)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2018-03-20 19:14:28 +0530
+Started GET "/auth/google_oauth2/callback?state=d037ea0e69d9c84495a8bd3aca148fa4a06195c7f2daeaac&code=4/AABNl1KeaJO2uDYBE0KKTvmkztVOlcCHxbdobtpIaD2Gmm6Zh9pzLaenfyMhgtNXp0NLA27Sk7NJ3nxTSe8kXxQ" for 127.0.0.1 at 2018-03-20 19:14:28 +0530
+Processing by BaseController#create as HTML
+  Parameters: {"state"=>"d037ea0e69d9c84495a8bd3aca148fa4a06195c7f2daeaac", "code"=>"4/AABNl1KeaJO2uDYBE0KKTvmkztVOlcCHxbdobtpIaD2Gmm6Zh9pzLaenfyMhgtNXp0NLA27Sk7NJ3nxTSe8kXxQ", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1[0m  [["email", "ashwini.mandal@cuelogic.com"]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "token" = $1, "expiresat" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["token", "ya29.GluEBebp3DCekRD-iYc9vWPNhwORYmktOAD1yMVLCyOLBVglcVBdkL1TCxH5uC6Fmy_Y8m8F5p28FZlP32JoqH3vHPoQNyO8o6gxeGZgR43Wa-yluggbuIIu5x1F"], ["expiresat", "2018-03-20 20:14:28 +0530"], ["updated_at", "2018-03-20 13:44:29.783586"], ["id", 57]]
+  [1m[35m (19.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "token" = $1, "expiresat" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["token", "ya29.GluEBebp3DCekRD-iYc9vWPNhwORYmktOAD1yMVLCyOLBVglcVBdkL1TCxH5uC6Fmy_Y8m8F5p28FZlP32JoqH3vHPoQNyO8o6gxeGZgR43Wa-yluggbuIIu5x1F"], ["expiresat", "2018-03-20 20:14:28 +0530"], ["updated_at", "2018-03-20 13:44:29.806083"], ["id", 55]]
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "token" = $1, "expiresat" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["token", "ya29.GluEBebp3DCekRD-iYc9vWPNhwORYmktOAD1yMVLCyOLBVglcVBdkL1TCxH5uC6Fmy_Y8m8F5p28FZlP32JoqH3vHPoQNyO8o6gxeGZgR43Wa-yluggbuIIu5x1F"], ["expiresat", "2018-03-20 20:14:28 +0530"], ["updated_at", "2018-03-20 13:44:29.814402"], ["id", 56]]
+  [1m[35m (5.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "token" = $1, "expiresat" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["token", "ya29.GluEBebp3DCekRD-iYc9vWPNhwORYmktOAD1yMVLCyOLBVglcVBdkL1TCxH5uC6Fmy_Y8m8F5p28FZlP32JoqH3vHPoQNyO8o6gxeGZgR43Wa-yluggbuIIu5x1F"], ["expiresat", "2018-03-20 20:14:28 +0530"], ["updated_at", "2018-03-20 13:44:29.823302"], ["id", 54]]
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  Rendering base/create.html.erb within layouts/base
+  Rendered base/create.html.erb within layouts/base (0.3ms)
+  Rendering layouts/partials/base/_nav.html.erb
+  Rendered layouts/partials/base/_nav.html.erb (0.4ms)
+  Rendering layouts/partials/base/_left_side_nav.html.erb
+  Rendered layouts/partials/base/_left_side_nav.html.erb (0.8ms)
+  Rendering layouts/partials/base/_footer.html.erb
+  Rendered layouts/partials/base/_footer.html.erb (0.4ms)
+Completed 200 OK in 79ms (Views: 15.6ms | ActiveRecord: 38.4ms)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
