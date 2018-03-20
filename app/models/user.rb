@@ -31,7 +31,6 @@ class User < ApplicationRecord
 
     def self.setExpireAtFormat(expiresAt)
         time=expiresAt.to_i
-        puts "xxxx",expiresAt
         expires_at=Time.at(time)
     end
 
