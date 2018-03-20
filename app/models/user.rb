@@ -16,11 +16,7 @@ class User < ApplicationRecord
 
     def self.sentMails(gmail)
         sent=gmail.labels.localize(:sent)
-        puts "yyyy"
         puts gmail.mailbox(sent).emails[0]
-        #binding.pry
-       #puts gmail.mailbox(sent).emails[0].message
-      
     end
 
     def self.validateAccessToken
@@ -49,8 +45,11 @@ client_secret: 'XGPQzwQGzIsTImllNsgOOgD4') rescue nil
     def self.getMailThreads
             user=User.last
             email=user.email
-            token=user[:token]
-        response = RestClient.get("https://www.googleapis.com/gmail/v1/users/#{email}/threads?labelIds=SENT&accessToken=#{token}")
+            token=user.token
+        response = RestClient.get("https://www.googleapis.com/gmail/v1/users/#{email}/threads?labelIds=SENT&access_token=#{token}")
         puts response
+     end
+     def userLogin
+        puts
      end
 end
